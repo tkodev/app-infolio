@@ -1,30 +1,30 @@
-var electron = require('electron');
+// ****************************************
+// variables init
+// ****************************************
+// Module to control application life.
+const electron = require('electron')
+// Module to create native browser window.
+const app = electron.app
+const BrowserWindow = electron.BrowserWindow
+// Node Modules
+const path = require('path')
+const url = require('url')
 
-var BrowserWindow = electron.BrowserWindow;  // Module to create native browser window.
-var app = electron.app;  // Module to control application life.
-var remote = electron.remote;
-var dialog = electron.dialog;
 
-var path = require('path')
-var url = require('url')
+// ****************************************
+// variables init
+// ****************************************
 
-// Keep a global reference of the window object, if you don't, the window will
-// be closed automatically when the JavaScript object is garbage collected.
-var mainWindow = null;
+// Keep a global reference of the window object so it doesn't get deleted.
+let mainWindow
 
-// Quit when all windows are closed.
-app.on('window-all-closed', function() {
-  // On OS X it is common for applications and their menu bar
-  // to stay active until the user quits explicitly with Cmd + Q
-  if (process.platform != 'darwin') {
-    app.quit();
-  }
-});
 
-// This method will be called when Electron has finished
-// initialization and is ready to create browser windows.
-app.on('ready', function() {
-  // Create the browser window.
+// ****************************************
+// Main Process
+// ****************************************
+
+// Create the browser window.
+function createWindow () {
   mainWindow = new BrowserWindow({
     width: 1280,
     height: 800,
@@ -33,23 +33,33 @@ app.on('ready', function() {
     'accept-first-mouse': true,
     'title-bar-style': 'hidden'
   });
-
-  // and load the index.html of the app.
-  // mainWindow.loadUrl('file://' + __dirname + '/index.html');
+  // Load the index.html of the app.
   mainWindow.loadURL(url.format({
     pathname: path.join(__dirname, 'index.html'),
     protocol: 'file:',
     slashes: true
   }))
-
-  // Open the DevTools.
-  //mainWindow.openDevTools();
-
   // Emitted when the window is closed.
-  mainWindow.on('closed', function() {
-    // Dereference the window object, usually you would store windows
-    // in an array if your app supports multi windows, this is the time
-    // when you should delete the corresponding element.
-    mainWindow = null;
-  });
-});
+  mainWindow.on('closed', function () {
+    // Dereference the window object to delete it from memory
+    mainWindow = null
+  })
+}
+
+// Emitted when electron is fully ready.
+app.on('ready', createWindow)
+
+// Quit when all windows are closed.
+app.on('window-all-closed', function () {
+  // OSX only fully quits when user explicity quits using cmd + Q
+  if (process.platform !== 'darwin') {
+    app.quit()
+  }
+})
+
+// Since OSX app may still be active with no window, recreate when activated.
+app.on('activate', function () {
+  if (mainWindow === null) {
+    createWindow()
+  }
+})
