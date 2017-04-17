@@ -1,6 +1,9 @@
 var electron = require('electron');
-var app = electron.app;  // Module to control application life.
+
 var BrowserWindow = electron.BrowserWindow;  // Module to create native browser window.
+var app = electron.app;  // Module to control application life.
+var remote = electron.remote;
+var dialog = electron.dialog;
 
 var path = require('path')
 var url = require('url')
