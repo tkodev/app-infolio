@@ -1,6 +1,5 @@
 .pane {
   display: flex;
-  /*min-height: 100vh;*/
   flex-direction: column;
 }
 
@@ -15,10 +14,10 @@
 .pane-content.nav-group .nav-group-item .icon {
   width: 17px;
   height: 16px;
-  float: left;
-  color: #737475;
-  margin-top: -3px;
-  margin-right: 7px;
   font-size: 16px;
-  text-align: center;
 }
+
+/*
+.toolbar-actions, .toolbar-actions, * {
+  overflow: hidden !important;
+}*/
