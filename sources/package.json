@@ -1,7 +1,7 @@
 {
-  "name": "htko-project-editor",
+  "name": "htko-portfolio-manager",
   "version": "0.0.1",
-  "description": "Project metadata editor built in electron",
+  "description": "Electron desktop app for portfolio management",
   "main": "app.js",
   "author": "Tony Ko",
   "scripts": {
