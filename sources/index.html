@@ -3,8 +3,10 @@
   <head>
     <title>Portfolio Manager</title>
 
-    <link rel="stylesheet" href="css/photon.min.css">
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="lib/photon-0.1.2-alpha/css/photon.min.css">
+    <link rel="stylesheet" href="lib/custom/css/index.css">
+    <script src="lib/jQuery-3.1.1/js/jquery-3.1.1.min.js" onload="window.$ = window.jQuery = module.exports;"></script>
+    <script src="renderer.js"></script>
 
   </head>
   <body>
@@ -15,7 +17,7 @@
           <div class="pane pane-sm sidebar">
             <header class="toolbar toolbar-header">
               <div class="toolbar-actions">
-                <button class="btn btn-default" id="openRoot">
+                <button class="btn btn-default" id="open_root_btn">
                   <span class="icon icon-folder icon-text"></span>
                   Open Portfolio Root
                 </button>
@@ -112,9 +114,5 @@
       </div>
     </div>
 
-    <script>
-      // You can also require other files to run in this process
-      require('./renderer.js')
-    </script>
   </body>
 </html>
