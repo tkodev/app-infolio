@@ -10,17 +10,13 @@
   </head>
   <body>
     <div class="window">
-
-      <!-- <header class="toolbar toolbar-header">
-        <h1 class="title">Portfolio Manager</h1>
-      </header> -->
-
       <div class="window-content">
+
         <div class="pane-group">
           <div class="pane pane-sm sidebar">
             <header class="toolbar toolbar-header">
               <div class="toolbar-actions">
-                <button class="btn btn-default">
+                <button class="btn btn-default" id="openRoot">
                   <span class="icon icon-folder icon-text"></span>
                   Open Portfolio Root
                 </button>
@@ -49,16 +45,10 @@
           <div class="pane">
             <header class="toolbar toolbar-header">
               <div class="toolbar-actions">
-                <div class="btn-group">
-                  <button class="btn btn-default">
-                    <span class="icon icon-pencil icon-text"></span>
-                    Markdown
-                  </button>
-                  <button class="btn btn-default">
-                    <span class="icon icon-newspaper icon-text"></span>
-                    Preview
-                  </button>
-                </div>
+                <button class="btn btn-default">
+                  <span class="icon icon-pencil icon-text"></span>
+                  Markdown
+                </button>
               </div>
             </header>
             <div class="pane-content">
@@ -84,6 +74,10 @@
             <header class="toolbar toolbar-header">
               <div class="toolbar-actions">
                 <div class="btn-group">
+                  <button class="btn btn-default">
+                    <span class="icon icon-newspaper icon-text"></span>
+                    Preview
+                  </button>
                   <button class="btn btn-default">
                     <span class="icon icon-picture icon-text"></span>
                     Assets
@@ -115,12 +109,13 @@
           </div>
 
         </div>
+
       </div>
-
-      <!-- <footer class="toolbar toolbar-footer">
-        <h1 class="title"> </h1>
-      </footer> -->
-
     </div>
+
+    <script>
+      var remote = require('remote');
+      var dialog = remote.require('dialog');
+    </script>
   </body>
 </html>
