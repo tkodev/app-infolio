@@ -5,7 +5,6 @@
 
     <link rel="stylesheet" href="css/photon.min.css">
     <link rel="stylesheet" href="css/custom.css">
-    <script src="js/menu.js" charset="utf-8"></script>
 
   </head>
   <body>
@@ -114,8 +113,8 @@
     </div>
 
     <script>
-      var remote = require('remote');
-      var dialog = remote.require('dialog');
+      // You can also require other files to run in this process
+      require('./renderer.js')
     </script>
   </body>
 </html>
