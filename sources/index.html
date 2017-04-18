@@ -5,14 +5,19 @@
 
     <link rel="stylesheet" href="lib/photon-0.1.2-alpha/css/photon.min.css">
     <link rel="stylesheet" href="lib/custom/css/index.css">
-    <script src="lib/jQuery-3.1.1/js/jquery-3.1.1.min.js" onload="window.$ = window.jQuery = module.exports;"></script>
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+    <script src="lib/jQuery-3.1.1/js/jquery-3.1.1.min.js"></script>
+    <script src="lib/jstree-3.3.4/js/jstree.min.js"></script>
     <script src="renderer.js"></script>
+    <!-- Insert this line after script imports (for jquery) -->
+    <script>if (window.module) module = window.module;</script>
 
   </head>
   <body>
     <div class="window">
       <div class="window-content">
 
+        <!-- Nav Pane -->
         <div class="pane-group">
           <div class="pane pane-sm sidebar">
             <header class="toolbar toolbar-header">
@@ -43,6 +48,7 @@
             </footer>
           </div>
 
+          <!-- Main Pane -->
           <div class="pane">
             <header class="toolbar toolbar-header">
               <div class="toolbar-actions">
@@ -53,7 +59,7 @@
               </div>
             </header>
             <div class="pane-content">
-              <!-- temp -->
+              <!-- content -->
             </div>
             <footer class="toolbar toolbar-footer">
               <div class="toolbar-actions">
@@ -71,6 +77,7 @@
             </footer>
           </div>
 
+          <!-- Aux Pane -->
           <div class="pane">
             <header class="toolbar toolbar-header">
               <div class="toolbar-actions">
@@ -91,7 +98,7 @@
               </div>
             </header>
             <div class="pane-content">
-              <!-- temp -->
+              <!-- content -->
             </div>
             <footer class="toolbar toolbar-footer">
               <div class="toolbar-actions">
