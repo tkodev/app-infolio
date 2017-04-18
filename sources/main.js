@@ -66,11 +66,7 @@ ipc.on( 'root_refresh_btn', function( event ) {
 
 function getTree( path ) {
   let tree = dirTree( path, [ '/' ] );
-  tree = {
-    'core': {
-      'data': tree
-    }
-  };
+
   return tree;
 }
 

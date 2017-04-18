@@ -5,6 +5,9 @@
 
 .pane-content {
   flex: 1;
+  height: 100%;
+  width: auto;
+  overflow: auto;
 }
 
 .pane-content.nav-group {

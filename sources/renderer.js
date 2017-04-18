@@ -23,6 +23,8 @@ $( document ).ready( function() {
   } );
   ipc.on( 'root_tree', function( event, root_tree ) {
     console.log( root_tree );
-    $( '#nav' ).jstree( root_tree );
+    $( '#root_tree' ).treeview( {
+      data: [ root_tree ]
+    } );
   } );
 } );
