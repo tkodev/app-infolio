@@ -5,12 +5,12 @@
 const electron = require( 'electron' );
 const ipc = electron.ipcRenderer;
 
-
 // ****************************************
 // Active States
 // ****************************************
 // Document Ready
-document.addEventListener( "DOMContentLoaded", function() {
+// document.addEventListener( "DOMContentLoaded", function() {
+$( document ).ready(function() {
   // open_root
   const open_root_btn = document.getElementById( 'open_root_btn' );
   open_root_btn.addEventListener( 'click', function( event ) {
