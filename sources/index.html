@@ -4,7 +4,7 @@
     <title>Portfolio Manager</title>
 
     <link rel="stylesheet" href="lib/photon-0.1.2-alpha/css/photon.min.css">
-    <link rel="stylesheet" href="lib/custom/css/index.css">
+    <link rel="stylesheet" href="lib/index/css/index.css">
     <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
     <script src="lib/jQuery-3.1.1/js/jquery-3.1.1.min.js"></script>
     <script src="renderer.js"></script>
@@ -29,13 +29,13 @@
                 </button>
               </div>
             </header>
-            <nav class="pane-content nav-group" id="rootTreeNav">
-              <h5 class="nav-group-title">Portfolio Root Tree</h5>
-              <!-- <span class="nav-group-item">
-                <span class="icon icon-right-open icon-text"></span>
-                Root
-              </span> -->
-            </nav>
+            <div class="pane-content">
+              <nav class="nav-group">
+                <h5 class="nav-group-title">Portfolio Root Tree</h5>
+              </nav>
+              <nav class="nav-group" id="rootTreeNav">
+              </nav>
+            </div>
             <footer class="toolbar toolbar-footer">
               <div class="toolbar-actions">
                 <button class="btn btn-default">
