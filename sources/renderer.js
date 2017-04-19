@@ -18,7 +18,7 @@ function traverse(tree,func){
 }
 // Document Ready
 $( document ).ready( function() {
-  // Nav Pane
+  // Tree Pane
   const rootOpenBtn = document.getElementById( 'rootOpenBtn' );
   const rootRefBtn = document.getElementById( 'rootRefBtn' );
   rootOpenBtn.addEventListener( 'click', function( event ) {
@@ -33,5 +33,5 @@ $( document ).ready( function() {
     console.log( rootTree );
     traverse(rootTree, buildButton);
   } );
-  function
+  function renderTreeElement()
 } );
