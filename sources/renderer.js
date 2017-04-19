@@ -9,11 +9,17 @@ const ipc = electron.ipcRenderer;
 // Active States
 // ****************************************
 // Global Functions
-function traverse(tree,func){
-  if(tree.children){
-    tree.children.forEach(val,idx){
-      traverse(tree.children[val]);
+function traverse(node,func,depth){
+  console.log(node.name);
+  if(node.children){
+    if (typeof depth === 'number'){
+      depth++;
+    } else {
+      depth = 1;
     }
+    node.children.forEach(function(val){
+      traverse(val,func,depth);
+    });
   }
 }
 // Document Ready
@@ -31,7 +37,9 @@ $( document ).ready( function() {
   } );
   ipc.on( 'rootTreeEvent', function( event, rootTree ) {
     console.log( rootTree );
-    traverse(rootTree, buildButton);
+    traverse(rootTree, renderTreeElement);
   } );
-  function renderTreeElement()
+  function renderTreeElement(){
+
+  }
 } );
