@@ -8,23 +8,30 @@ const ipc = electron.ipcRenderer;
 // ****************************************
 // Active States
 // ****************************************
+// Global Functions
+function traverse(tree,func){
+  if(tree.children){
+    tree.children.forEach(val,idx){
+      traverse(tree.children[val]);
+    }
+  }
+}
 // Document Ready
 $( document ).ready( function() {
   // Nav Pane
-  const root_open_btn = document.getElementById( 'root_open_btn' );
-  const root_refresh_btn = document.getElementById( 'root_refresh_btn' );
-  root_open_btn.addEventListener( 'click', function( event ) {
-    ipc.send( 'root_open_btn' );
-    console.log( 'root_open_btn' );
+  const rootOpenBtn = document.getElementById( 'rootOpenBtn' );
+  const rootRefBtn = document.getElementById( 'rootRefBtn' );
+  rootOpenBtn.addEventListener( 'click', function( event ) {
+    ipc.send( 'rootOpenEvent' );
+    console.log( 'rootOpenEvent' );
   } );
-  root_refresh_btn.addEventListener( 'click', function( event ) {
-    ipc.send( 'root_refresh_btn' );
-    console.log( 'root_refresh_btn' );
+  rootRefBtn.addEventListener( 'click', function( event ) {
+    ipc.send( 'rootRefEvent' );
+    console.log( 'rootRefEvent' );
   } );
-  ipc.on( 'root_tree', function( event, root_tree ) {
-    console.log( root_tree );
-    $( '#root_tree' ).treeview( {
-      data: [ root_tree ]
-    } );
+  ipc.on( 'rootTreeEvent', function( event, rootTree ) {
+    console.log( rootTree );
+    traverse(rootTree, buildButton);
   } );
+  function
 } );
