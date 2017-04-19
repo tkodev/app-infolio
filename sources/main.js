@@ -17,8 +17,7 @@ const dirTree = require( 'directory-tree' );
 // ****************************************
 // Keep a global reference of the window object so it doesn't get deleted.
 let mainWindow;
-let root_path;
-let root_tree;
+let rootPath;
 
 // ****************************************
 // Active States
@@ -48,26 +47,24 @@ function createWindow() {
 // Emitted when electron is fully ready.
 app.on( 'ready', createWindow );
 // Nav Pane
-ipc.on( 'root_open_btn', function( event ) {
+ipc.on( 'rootOpenEvent', function( event ) {
   dialog.showOpenDialog( {
     properties: [ 'openDirectory', 'createDirectory' ]
   }, function( files ) {
     if ( files && files.length === 1 ) {
-      root_path = files[ 0 ];
-      event.sender.send( 'root_tree', getTree( root_path ) );
+      rootPath = files[ 0 ];
+      event.sender.send( 'rootTreeEvent', getTree( rootPath ) );
     }
   } );
 } );
-ipc.on( 'root_refresh_btn', function( event ) {
-  if ( root_path !== "" ) {
-    event.sender.send( 'root_tree', getTree( root_path ) );
+ipc.on( 'rootRefEvent', function( event ) {
+  if ( rootPath !== "" ) {
+    event.sender.send( 'rootTreeEvent', getTree( rootPath ) );
   }
 } );
 
 function getTree( path ) {
-  let tree = dirTree( path, [ '/' ] );
-
-  return tree;
+  return dirTree( path, [ '/' ] );
 }
 
 // ****************************************
