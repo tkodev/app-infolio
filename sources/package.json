@@ -5,13 +5,12 @@
   "main": "main.js",
   "author": "Tony Ko",
   "scripts": {
-    "start": "electron ."
+    "start": "electron main.js",
+    "watch": "gulp watch"
   },
   "devDependencies": {
-    "electron": "~1.6.2"
-  },
-  "dependencies": {
-    "directory-tree": "^1.2.1",
-    "traverse": "^0.6.6"
+    "electron": "~1.6.2",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-nodemon": "^2.2.1"
   }
 }

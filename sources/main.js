@@ -10,7 +10,6 @@ const dialog = electron.dialog;
 // Node Modules
 const path = require( 'path' );
 const url = require( 'url' );
-const dirTree = require( 'directory-tree' );
 
 // ****************************************
 // Variables Init
@@ -53,19 +52,17 @@ ipc.on( 'rootOpenEvent', function( event ) {
   }, function( files ) {
     if ( files && files.length === 1 ) {
       rootPath = files[ 0 ];
-      event.sender.send( 'rootTreeEvent', getTree( rootPath ) );
+      // event.sender.send( 'rootTreeEvent', getTree( rootPath ) );
     }
   } );
 } );
 ipc.on( 'rootRefEvent', function( event ) {
   if ( rootPath !== "" ) {
-    event.sender.send( 'rootTreeEvent', getTree( rootPath ) );
+    // event.sender.send( 'rootTreeEvent', getTree( rootPath ) );
   }
 } );
 
-function getTree( path ) {
-  return dirTree( path, [ '/' ] );
-}
+
 
 // ****************************************
 // Other States
