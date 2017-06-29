@@ -1,0 +1,65 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+#main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#main, #main-container, #app-card {
+  height: 100%;
+  width: 100%;
+}
+
+#app-card, #markdown-react, #markdown-input, #markdown-input * {
+  display: flex;
+  flex-flow: column;
+}
+
+#app-card header {
+  flex: 0 1 auto;
+}
+
+#app-card, #markdown-react, #markdown-container, #markdown-input, #markdown-input * {
+  flex: 1;
+}
+
+/* width larger than 769px */
+@media screen and (min-width: 769px) {
+  #markdown-input {
+    border-right: 1px solid rgba(10, 10, 10, 0.1);
+  }
+}
+
+/* width smaller than 768px */
+@media screen and (max-width: 768px) {
+  #markdown-container {
+    display: flex;
+    flex-flow: column;
+  }
+  #markdown-input, #markdown-output {
+    border-bottom: 1px solid rgba(10, 10, 10, 0.1);
+  }
+}
+
+#markdown-input textarea {
+  max-height: none;
+  max-width: none;
+  resize: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: transparent;
+  font-family: "Roboto Mono", monospace;
+}
+
+#markdown-output {
+  padding: 0.625em;
+}
+
+#links-card {
+  margin-top: 1em;
+  margin-bottom: 3em;
+}

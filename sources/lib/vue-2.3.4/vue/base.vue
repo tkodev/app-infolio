@@ -1,0 +1,110 @@
+<div class="window">
+	<div class="window-content">
+		<div class="pane-group">
+
+			<!-- Tree Pane -->
+			<div class="pane pane-sm sidebar">
+				<header class="toolbar toolbar-header">
+					<div class="toolbar-actions">
+						<button class="btn btn-default" id="rootOpenBtn">
+							<span class="icon icon-folder icon-text"></span>
+							Open Portfolio Root
+						</button>
+						<button class="btn btn-default pull-right" id="rootRefBtn">
+							<span class="icon icon-cw"></span>
+						</button>
+					</div>
+				</header>
+				<div class="pane-content">
+					<nav class="nav-group">
+						<h5 class="nav-group-title">Portfolio Root Tree</h5>
+					</nav>
+					<nav class="nav-group" id="rootTreeNav">
+					</nav>
+				</div>
+				<footer class="toolbar toolbar-footer">
+					<div class="toolbar-actions">
+						<button class="btn btn-default">
+							<span class="icon icon-plus icon-text"></span>
+							Project
+						</button>
+					</div>
+				</footer>
+			</div>
+
+			<!-- Main Pane -->
+			<div class="pane">
+				<header class="toolbar toolbar-header">
+					<div class="toolbar-actions">
+						<button class="btn btn-default">
+							<span class="icon icon-pencil icon-text"></span>
+							Markdown
+						</button>
+					</div>
+				</header>
+				<div class="pane-content">
+					<!-- Content -->
+				</div>
+				<footer class="toolbar toolbar-footer">
+					<div class="toolbar-actions">
+						<div class="btn-group">
+							<button class="btn btn-default">
+								<span class="icon icon-floppy icon-text"></span>
+								Save
+							</button>
+							<button class="btn btn-default">
+								<span class="icon icon-cw icon-text"></span>
+								Revert
+							</button>
+						</div>
+					</div>
+				</footer>
+			</div>
+
+			<!-- Aux Pane -->
+			<div class="pane">
+				<header class="toolbar toolbar-header">
+					<div class="toolbar-actions">
+						<div class="btn-group">
+							<button class="btn btn-default">
+								<span class="icon icon-newspaper icon-text"></span>
+								Preview
+							</button>
+							<button class="btn btn-default">
+								<span class="icon icon-picture icon-text"></span>
+								Assets
+							</button>
+							<button class="btn btn-default">
+								<span class="icon icon-tag icon-text"></span>
+								Metadata
+							</button>
+						</div>
+					</div>
+				</header>
+				<div class="pane-content">
+					<!-- Content -->
+				</div>
+				<footer class="toolbar toolbar-footer">
+					<div class="toolbar-actions">
+						<div class="btn-group">
+							<button class="btn btn-default">
+								<span class="icon icon-plus icon-text"></span>
+								Asset
+							</button>
+							<button class="btn btn-default">
+								<span class="icon icon-plus icon-text"></span>
+								Metadata
+							</button>
+						</div>
+					</div>
+				</footer>
+			</div>
+
+		</div><!-- /div class="pane-group" -->
+	</div><!-- /div class="window-content" -->
+
+	<footer class="toolbar toolbar-footer">
+		<h1 class="title">Status: <span id="status"></span></h1>
+	</footer>
+
+</div><!-- /div class="window" -->
