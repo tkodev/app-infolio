@@ -12,7 +12,7 @@ const paths = {
 
 let config = {
 
-	watch: false,
+	watch: true,
 
 	target: 'electron',
 

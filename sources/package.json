@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "build": "webpack",
-    "start": "electron ./"
+    "start": "electron ./",
+		"watch": "webpack & electron ./"
   },
   "author": "J. Renato Ramos González <renato.etc.etc.etc@gmail.com>",
   "repository": "pastahito/electron-vue-webpack",
