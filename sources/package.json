@@ -1,25 +1,31 @@
 {
-  "name": "electron-vue-webpack",
+  "name": "HTKO-Portfolio-Manager",
   "version": "1.0.0",
-  "description": "A minimal Electron + Vue 2 + Webpack 2 setup with few dependencies for quick development.",
+  "description": "Portfolio management desktop app built with Electron and React.",
   "main": "main.js",
   "scripts": {
+		"build:electron": "",
     "build": "webpack",
-    "start": "electron ./",
     "watch": "webpack --watch & electron ./",
     "watch:alt": "webpack --watch & browser-sync start --localOnly --files './source' & electron ./"
   },
-  "author": "J. Renato Ramos González <renato.etc.etc.etc@gmail.com>",
-  "repository": "pastahito/electron-vue-webpack",
-  "license": "WTFPL",
-  "dependencies": {
-    "vue": "^2.3.4"
-  },
+  "author": "Tony Ko <tony@htko.ca>",
+  "repository": "https://github.com/htkoca/htko-portfolio-manager.git",
+  "license": "",
+	"build": {
+		"productName": "HTKO Portfolio Manager",
+	  "appId": "ca.htko.portfolio-manager",
+	  "mac": {
+	    "category": "public.app-category.developer-tools"
+	  }
+	},
   "devDependencies": {
+		"vue": "^2.3.4",
     "ajv": "^5.2.2",
     "browser-sync": "^2.18.13",
     "css-loader": "^0.28.4",
     "electron": "^1.6.11",
+    "electron-builder": "^19.22.1",
     "electron-reload": "^1.2.1",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
