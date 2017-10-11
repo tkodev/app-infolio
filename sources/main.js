@@ -13,17 +13,30 @@ require('electron-reload')(__dirname, {
 let mainWindow;
 
 app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') app.quit();
+	// leave app running on macos (standard behaviour)
+	if (process.platform != 'darwin') {
+    app.quit();
+  }
 });
 
 app.on('ready', () => {
 
-    let mainWindow = new BrowserWindow({width: 800, height: 600})
+	// Create the browser window.
+	let mainWindow = new BrowserWindow({
+		width: 600,
+		height: 300,
+		'titleBarStyle': 'hidden'
+	});
 
-    mainWindow.loadURL(`file://${__dirname}/public/index.html`)
+	// and load the index.html of the app.
+  mainWindow.loadURL(`file://${__dirname}/public/index.html`)
 
-		mainWindow.on('closed', () => {
-			mainWindow = null;
-		});
+	// Open the DevTools.
+	//mainWindow.openDevTools();
+
+	// Emitted when the window is closed.
+	mainWindow.on('closed', () => {
+		mainWindow = null;
+	});
 
 })

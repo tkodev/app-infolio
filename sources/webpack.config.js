@@ -31,7 +31,7 @@ let config = {
 
 	module: {
 		rules: [{
-			test: /\.vue$/,
+			test: /\.(vue|mustache)$/,
 			loader: 'vue-loader'
 		}, {
 			test: /\.(png|jpg|gif)$/,
