@@ -19,8 +19,8 @@ let config = {
 	target: 'electron',
 
 	entry: {
-		app: path.join(paths.source, "lib/core/js/app.js"),
-		vendor: path.join(paths.source, "lib/core/js/vendor.js")
+		app: path.join(paths.source, "lib/base/js/app.js"),
+		vendor: path.join(paths.source, "lib/base/js/vendor.js")
 	},
 
 	output: {
@@ -63,10 +63,15 @@ let config = {
 	},
 
 	plugins: [
+		new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+			Popper: "popper.js"
+    }),
 		new HtmlWebpackPlugin({
 			template: "./source/index.html",
 			filename: "index.html",
-			inject: "head"
+			inject: "body"
 		}),
 		new ExtractTextPlugin({
 			filename: "lib/css/[name].css?[hash]",
@@ -77,12 +82,6 @@ let config = {
 	resolve: {
 		modules: [paths.modules]
 	}
-
-	// resolve: {
-	// 	alias: {
-	// 		vue: 'vue/dist/vue.js'
-	// 	}
-	// }
 
 }
 

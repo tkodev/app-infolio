@@ -23,10 +23,9 @@ app.on('ready', () => {
 
 	// Create the browser window.
 	mainWindow = new BrowserWindow({
-		width: 600,
-		height: 300,
-		'titleBarStyle': 'hidden',
-		// frame: false
+		width: 1024,
+		height: 768,
+		frame: false
 	});
 
 	// and load the index.html of the app.
