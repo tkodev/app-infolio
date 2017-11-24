@@ -4,7 +4,7 @@
   "description": "Portfolio management desktop app built with Electron and React.",
   "main": "main.js",
   "scripts": {
-		"build:electron": "",
+    "build:electron": "",
     "build": "webpack",
     "watch": "webpack --watch & electron ./",
     "watch:alt": "webpack --watch & browser-sync start --localOnly --files './source' & electron ./"
@@ -12,29 +12,29 @@
   "author": "Tony Ko <tony@htko.ca>",
   "repository": "https://github.com/htkoca/htko-portfolio-manager.git",
   "license": "",
-	"build": {
-		"productName": "HTKO Portfolio Manager",
-	  "appId": "ca.htko.portfolio-manager",
-	  "mac": {
-	    "category": "public.app-category.developer-tools"
-	  }
-	},
+  "build": {
+    "productName": "HTKO Portfolio Manager",
+    "appId": "ca.htko.portfolio-manager",
+    "mac": {
+      "category": "public.app-category.developer-tools"
+    }
+  },
   "devDependencies": {
-		"vue": "^2.3.4",
-    "ajv": "^5.2.2",
+    "vue": "^2.5.8",
+    "ajv": "^5.4.0",
     "browser-sync": "^2.18.13",
-    "css-loader": "^0.28.4",
-    "electron": "^1.6.11",
-    "electron-builder": "^19.22.1",
-    "electron-reload": "^1.2.1",
-    "extract-text-webpack-plugin": "^3.0.0",
-    "file-loader": "^0.11.2",
-    "html-webpack-plugin": "^2.29.0",
-    "node-sass": "^4.5.3",
+    "css-loader": "^0.28.7",
+    "electron": "^1.7.9",
+    "electron-builder": "^19.46.4",
+    "electron-reload": "^1.2.2",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.5",
+    "html-webpack-plugin": "^2.30.1",
+    "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6",
-    "style-loader": "^0.18.2",
-    "vue-loader": "^13.0.0",
-    "vue-template-compiler": "^2.3.4",
-    "webpack": "^3.5.4"
+    "style-loader": "^0.19.0",
+    "vue-loader": "^13.5.0",
+    "vue-template-compiler": "^2.5.8",
+    "webpack": "^3.8.1"
   }
 }
