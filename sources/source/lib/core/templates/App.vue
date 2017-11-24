@@ -5,24 +5,17 @@
 				<h1 class="title">Header</h1>
 			</header>
 			<div class="window-content">
-				<hello></hello>
-				<p>
-					{{tester}}<br>
-					If you are trying to build Electron apps using Vue 2, or you just want to play around with them, feel free to use this seed as starting point.
-				</p>
-				<p>
-					Pay attention to how resources inside src/ folder are built, CSS code inside .vue components is embed into the HTML file when loaded, or simply relative image paths are updated to public paths after building with Webpack.
-				</p>
-				<p>
-					Here are the docs for
-					<a href='#' @click="link('http://electron.atom.io/docs/')">Electron</a>,
-					<a href='#' @click="link('http://vuejs.org/guide/')">Vue 2</a> and
-					<a href='#' @click="link('http://webpack.github.io/docs/')">Webpack</a>. Customize this template as you wish by adding any fancy tool you are used to.
-				</p>
-				<p>
-					If you have any issues, please file an issue at this seed's
-					<a href='#' @click="link('https://github.com/pastahito/electron-vue-webpack')">repository</a>.
-				</p>
+				<div class="pane-group">
+					<div class="pane-sm sidebar">
+
+					</div>
+					<div class="pane">
+
+					</div>
+					<div class="pane">
+
+					</div>
+				</div>
 			</div>
 			<footer class="toolbar toolbar-footer">
 				<h1 class="title">Footer</h1>

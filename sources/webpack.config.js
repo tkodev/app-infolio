@@ -66,7 +66,7 @@ let config = {
 		new HtmlWebpackPlugin({
 			template: "./source/index.html",
 			filename: "index.html",
-			inject: "body"
+			inject: "head"
 		}),
 		new ExtractTextPlugin({
 			filename: "lib/css/[name].css?[hash]",

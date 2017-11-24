@@ -22,10 +22,11 @@ app.on('window-all-closed', () => {
 app.on('ready', () => {
 
 	// Create the browser window.
-	let mainWindow = new BrowserWindow({
+	mainWindow = new BrowserWindow({
 		width: 600,
 		height: 300,
-		'titleBarStyle': 'hidden'
+		'titleBarStyle': 'hidden',
+		// frame: false
 	});
 
 	// and load the index.html of the app.

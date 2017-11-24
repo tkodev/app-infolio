@@ -8195,13 +8195,6 @@ module.exports = function listToStyles (parentId, list) {
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -8379,118 +8372,33 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { attrs: { id: "root" } }, [
-    _c("div", { staticClass: "window" }, [
-      _vm._m(0),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "window-content" },
-        [
-          _c("hello"),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v("\n\t\t\t\t" + _vm._s(_vm.tester)),
-            _c("br"),
-            _vm._v(
-              "\n\t\t\t\tIf you are trying to build Electron apps using Vue 2, or you just want to play around with them, feel free to use this seed as starting point.\n\t\t\t"
-            )
-          ]),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              "\n\t\t\t\tPay attention to how resources inside src/ folder are built, CSS code inside .vue components is embed into the HTML file when loaded, or simply relative image paths are updated to public paths after building with Webpack.\n\t\t\t"
-            )
-          ]),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v("\n\t\t\t\tHere are the docs for\n\t\t\t\t"),
-            _c(
-              "a",
-              {
-                attrs: { href: "#" },
-                on: {
-                  click: function($event) {
-                    _vm.link("http://electron.atom.io/docs/")
-                  }
-                }
-              },
-              [_vm._v("Electron")]
-            ),
-            _vm._v(",\n\t\t\t\t"),
-            _c(
-              "a",
-              {
-                attrs: { href: "#" },
-                on: {
-                  click: function($event) {
-                    _vm.link("http://vuejs.org/guide/")
-                  }
-                }
-              },
-              [_vm._v("Vue 2")]
-            ),
-            _vm._v(" and\n\t\t\t\t"),
-            _c(
-              "a",
-              {
-                attrs: { href: "#" },
-                on: {
-                  click: function($event) {
-                    _vm.link("http://webpack.github.io/docs/")
-                  }
-                }
-              },
-              [_vm._v("Webpack")]
-            ),
-            _vm._v(
-              ". Customize this template as you wish by adding any fancy tool you are used to.\n\t\t\t"
-            )
-          ]),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              "\n\t\t\t\tIf you have any issues, please file an issue at this seed's\n\t\t\t\t"
-            ),
-            _c(
-              "a",
-              {
-                attrs: { href: "#" },
-                on: {
-                  click: function($event) {
-                    _vm.link(
-                      "https://github.com/pastahito/electron-vue-webpack"
-                    )
-                  }
-                }
-              },
-              [_vm._v("repository")]
-            ),
-            _vm._v(".\n\t\t\t")
-          ])
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _vm._m(1)
-    ])
-  ])
+  return _vm._m(0)
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("header", { staticClass: "toolbar toolbar-header draggable" }, [
-      _c("h1", { staticClass: "title" }, [_vm._v("Header")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("footer", { staticClass: "toolbar toolbar-footer" }, [
-      _c("h1", { staticClass: "title" }, [_vm._v("Footer")])
+    return _c("div", { attrs: { id: "root" } }, [
+      _c("div", { staticClass: "window" }, [
+        _c("header", { staticClass: "toolbar toolbar-header draggable" }, [
+          _c("h1", { staticClass: "title" }, [_vm._v("Header")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "window-content" }, [
+          _c("div", { staticClass: "pane-group" }, [
+            _c("div", { staticClass: "pane-sm sidebar" }),
+            _vm._v(" "),
+            _c("div", { staticClass: "pane" }),
+            _vm._v(" "),
+            _c("div", { staticClass: "pane" })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("footer", { staticClass: "toolbar toolbar-footer" }, [
+          _c("h1", { staticClass: "title" }, [_vm._v("Footer")])
+        ])
+      ])
     ])
   }
 ]
@@ -8501,16 +8409,6 @@ if (false) {
   module.hot.accept()
   if (module.hot.data) {
      require("vue-hot-reload-api").rerender("data-v-0fb1ab78", esExports)
-  }
-}
-
-/***/ })
-/******/ ]);ticRenderFns: staticRenderFns }
-/* harmony default export */ __webpack_exports__["a"] = (esExports);
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-902e9c96", esExports)
   }
 }
 
