@@ -1,17 +1,5 @@
-html, body {
+html, body, #app {
  height: 100%;
  width: 100%;
  margin: 0;
-}
-
-.windowbar {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	background-color: red;
-	width: 100%;
-	height: 2rem;
-	-webkit-app-region: drag;
-	-webkit-user-select: none;
 }

@@ -39,5 +39,8 @@
     "vue-loader": "^13.5.0",
     "vue-template-compiler": "^2.5.8",
     "webpack": "^3.8.1"
+  },
+  "dependencies": {
+    "pug": "^2.0.0-rc.4"
   }
 }

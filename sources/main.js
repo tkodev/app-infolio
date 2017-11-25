@@ -23,9 +23,11 @@ app.on('ready', () => {
 
 	// Create the browser window.
 	mainWindow = new BrowserWindow({
-		width: 1024,
-		height: 768,
-		frame: false
+		'min-height': 800,
+	  'min-width': 600,
+		'width': 1024,
+		'height': 768,
+		'frame': false
 	});
 
 	// and load the index.html of the app.

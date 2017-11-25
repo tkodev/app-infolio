@@ -1,20 +1,23 @@
-<template>
-	<div id="root">
-		<div class="windowbar">
-			asdfas
-		</div>
-		<div class="row no-gutters">
-			<div class="col col-3">
-s
-			</div>
-			<div class="col col-3">
-d
-			</div>
-			<div class="col col-3">
-ds
-			</div>
-		</div>
-	</div>
+<template lang="pug">
+	#app
+		#app-bar
+			#logo
+				i.fa.fa-magic
+				| Portfolio Manager
+			#controls
+				a#maximize(href="#")
+					i.fa.fa-plus-circle
+				a#minimize(href="#")
+					i.fa.fa-minus-circle
+				a#close(href="#")
+					i.fa.fa-times-circle
+		#app-row.row
+			#app-col-primary.col.col-3.app-col
+				| test
+			#app-col-secondary.col.col-1.app-col
+				| test
+			#app-col-content.col.col-8.app-col
+				| test
 </template>
 
 <script>
