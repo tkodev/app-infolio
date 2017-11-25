@@ -13,11 +13,11 @@
 					i.fa.fa-times-circle
 		#app-row.row
 			#app-col-primary.col.col-3.app-col
-				| test
+				| Nav
 			#app-col-secondary.col.col-1.app-col
-				| test
+				| Icons
 			#app-col-content.col.col-8.app-col
-				| test
+				| Content
 </template>
 
 <script>
