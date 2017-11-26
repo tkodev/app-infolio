@@ -19,8 +19,8 @@
       "category": "public.app-category.developer-tools"
     }
   },
-  "devDependencies": {
-    "ajv": "^5.4.0",
+  "dependencies": {
+		"ajv": "^5.4.0",
     "browser-sync": "^2.18.13",
     "css-loader": "^0.28.7",
     "directory-tree": "^2.0.0",
@@ -38,9 +38,7 @@
     "vue": "^2.5.8",
     "vue-loader": "^13.5.0",
     "vue-template-compiler": "^2.5.8",
-    "webpack": "^3.8.1"
-  },
-  "dependencies": {
+    "webpack": "^3.8.1",
     "pug": "^2.0.0-rc.4"
   }
 }
