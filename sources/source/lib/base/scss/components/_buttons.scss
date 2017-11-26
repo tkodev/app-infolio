@@ -1,9 +1,28 @@
+.btn-group {
+	.btn {
+		margin: 0;
+	}
+}
+
 .pm-btn-icon {
 	padding: 0.25rem;
 	&, i.fa {
 		line-height: $btn-icon-height;
 	}
-	+ .pm-icon-btn {
+	span {
 		margin-left: 0.25rem;
+	}
+	+ .pm-btn-icon {
+		margin-left: 0.25rem;
+	}
+}
+
+.pm-btn-block {
+	&, span {
+		width: 100%;
+		display: block;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 	}
 }

@@ -1,8 +1,10 @@
 .pm-logo {
+	white-space: nowrap;
 	> * {
 		margin-right: 0.5rem;
 		height: $btn-icon-height;
 		line-height: $btn-icon-height;
 		font-weight: $font-weight-bold;
+		font-size: $font-size-lg;
 	}
 }

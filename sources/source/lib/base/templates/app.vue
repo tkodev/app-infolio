@@ -1,29 +1,37 @@
 <template lang="pug">
 	#app
-		.pm-titlebar
-				a.pm-btn-icon.maximize.text-success(href="#")
-					i.fa.fa-plus-circle(aria-hidden="true", title="Maximize App")
-				a.pm-btn-icon.minimize.text-warning(href="#")
-					i.fa.fa-minus-circle(aria-hidden="true", title="Minimize App")
-				a.pm-btn-icon.close.text-danger(href="#")
-					i.fa.fa-times-circle(aria-hidden="true", title="Close App")
+		.pm-controls
+			a.pm-btn-icon.text-success(href="#")
+				i.fa.fa-plus-circle(aria-hidden="true", title="Maximize App")
+			a.pm-btn-icon.text-warning(href="#")
+				i.fa.fa-minus-circle(aria-hidden="true", title="Minimize App")
+			a.pm-btn-icon.text-danger(href="#")
+				i.fa.fa-times-circle(aria-hidden="true", title="Close App")
 		.pm-scaffold
 			.pm-scaffold-col.primary
 				.pm-scaffold-titlebar
 					.pm-logo
-						i.fa.fa-times-circle(aria-hidden="true", title="App Logo")
+						i.fa.fa-magic(aria-hidden="true", title="App Logo")
 						span {{appTitle}}
 				.pm-scaffold-content
-					Nav
+					Navpane
 			.pm-scaffold-col.secondary
 				.pm-scaffold-titlebar
-					| Content
+					a.pm-btn-icon(href="#")
+						i.far.fa-newspaper(aria-hidden="true")
+						span Readme
+					a.pm-btn-icon(href="#")
+						i.far.fa-tags(aria-hidden="true")
+						span Metadata
+					a.pm-btn-icon(href="#")
+						i.far.fa-images(aria-hidden="true")
+						span Assets
 				.pm-scaffold-content
 					| Text
 </template>
 
 <script>
-	import Nav from './Nav.vue'
+	import Navpane from './Navpane.vue'
 
 	// With shell.openExternal(url) is how
 	// external urls must be handled, not href
@@ -32,11 +40,11 @@
 	export default {
 		data() {
 			return {
-				appTitle: 'HTKO Portfolio Manager'
+				appTitle: 'Portfolio Manager'
 			}
 		},
 		components: {
-			Nav
+			Navpane
 		},
 		methods: {
 			link: (url) => {
