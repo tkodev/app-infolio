@@ -1,23 +1,25 @@
 <template lang="pug">
 	#app
-		#app-bar
-			#logo
-				i.fa.fa-magic
-				| Portfolio Manager
-			#controls
-				a#maximize(href="#")
-					i.fa.fa-plus-circle
-				a#minimize(href="#")
-					i.fa.fa-minus-circle
-				a#close(href="#")
-					i.fa.fa-times-circle
-		#app-row.row
-			#app-col-primary.col.col-3.app-col
-				| Nav
-			#app-col-secondary.col.col-1.app-col
-				| Icons
-			#app-col-content.col.col-8.app-col
-				| Content
+		.pm-titlebar
+				a.pm-btn-icon.maximize.text-success(href="#")
+					i.fa.fa-plus-circle(aria-hidden="true", title="Maximize App")
+				a.pm-btn-icon.minimize.text-warning(href="#")
+					i.fa.fa-minus-circle(aria-hidden="true", title="Minimize App")
+				a.pm-btn-icon.close.text-danger(href="#")
+					i.fa.fa-times-circle(aria-hidden="true", title="Close App")
+		.pm-scaffold
+			.pm-scaffold-col.primary
+				.pm-scaffold-titlebar
+					.pm-logo
+						i.fa.fa-times-circle(aria-hidden="true", title="App Logo")
+						span Portfolio Manager
+				.pm-scaffold-content
+					| Nav
+			.pm-scaffold-col.secondary
+				.pm-scaffold-titlebar
+					| Content
+				.pm-scaffold-content
+					| Text
 </template>
 
 <script>

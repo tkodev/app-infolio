@@ -7,6 +7,9 @@
 // Core Styles
 @import "core/globals";
 @import "core/helpers";
-@import "core/structure";
 
 // Components
+@import "components/scaffold";
+@import "components/titlebar";
+@import "components/logo";
+@import "components/buttons";

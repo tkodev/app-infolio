@@ -1,0 +1,9 @@
+.pm-btn-icon {
+	padding: 0.25rem;
+	&, i.fa {
+		line-height: $btn-icon-height;
+	}
+	+ .pm-icon-btn {
+		margin-left: 0.25rem;
+	}
+}

@@ -1,0 +1,15 @@
+.pm-titlebar {
+	z-index: 999;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: $titlebar-height;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 0 $grid-gutter-width/2;
+	-webkit-app-region: drag;
+	-webkit-user-select: none;
+}
