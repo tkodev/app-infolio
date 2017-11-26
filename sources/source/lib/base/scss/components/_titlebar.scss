@@ -6,10 +6,10 @@
 	right: 0;
 	width: 100%;
 	height: $titlebar-height;
+	padding: 0 $grid-gutter-width/2;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	padding: 0 $grid-gutter-width/2;
 	-webkit-app-region: drag;
 	-webkit-user-select: none;
 }

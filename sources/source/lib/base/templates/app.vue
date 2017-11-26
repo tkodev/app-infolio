@@ -12,9 +12,9 @@
 				.pm-scaffold-titlebar
 					.pm-logo
 						i.fa.fa-times-circle(aria-hidden="true", title="App Logo")
-						span Portfolio Manager
+						span {{appTitle}}
 				.pm-scaffold-content
-					| Nav
+					Nav
 			.pm-scaffold-col.secondary
 				.pm-scaffold-titlebar
 					| Content
@@ -23,7 +23,7 @@
 </template>
 
 <script>
-	import Hello from './hello.vue'
+	import Nav from './Nav.vue'
 
 	// With shell.openExternal(url) is how
 	// external urls must be handled, not href
@@ -32,11 +32,11 @@
 	export default {
 		data() {
 			return {
-				tester: 'Hello!'
+				appTitle: 'HTKO Portfolio Manager'
 			}
 		},
 		components: {
-			Hello
+			Nav
 		},
 		methods: {
 			link: (url) => {
