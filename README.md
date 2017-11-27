@@ -31,13 +31,15 @@ Portfolio Root
 └── ...
 ```
 
-Project folders can be anywhere under the portfolio root. The app will recognize project folders on its own.
-`README.md` contains your project readme.
-`infolio.json` contains project metadata such as status, full name, taxonomy, assets required, etc.
-`assets/` contains your project's image files.
-`sources/`,`releases/` and `scripts/` are examples of folders not touched by the program, but suggested organization. You can have any amount of folders like this.
+## Features
 
-## Operation
+* Project folders can be anywhere under the portfolio root. The app will recognize project folders on its own.
+* `README.md` contains your project readme.
+* `infolio.json` contains project metadata such as status, full name, taxonomy, assets required, etc.
+* `assets/` contains your project's image files.
+* `sources/`,`releases/` and `scripts/` are examples of folders not touched by the program, but suggested organization. You can have any amount of folders like this.
+
+## Get Started
 
 This application will allow you to select a root portfolio folder, which will be displayed on the tree pane.
 * You can browse your portfolio tree to find your project folders
