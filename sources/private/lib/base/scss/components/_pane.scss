@@ -1,0 +1,70 @@
+// basic layout
+.pm-pane-container {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	.pm-pane {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		max-width: 100%;
+		&.pm-alpha {
+			width: $pane-alpha-width;
+			background-color: $gray-900;
+			color: $white;
+		}
+		&.pm-beta {
+			width: $pane-beta-width;
+			background-color: $gray-800;
+		}
+		&.pm-omega {
+			width: $pane-omega-width;
+			background-color: $white;
+		}
+		.pm-pane-titlebar {
+			height: $titlebar-height;
+			width: 100%;
+			padding: 0 $grid-gutter-width/2;
+			background-color: rgba($gray-800, 0.05);
+			white-space: nowrap;
+			border-bottom: $border-transparent;
+			-webkit-app-region: drag;
+			-webkit-user-select: none;
+		}
+		.pm-pane-content {
+			width: 100%;
+			height: 100%;
+			padding: $grid-gutter-width/2 $grid-gutter-width/2;
+			overflow: auto;
+		}
+	}
+}
+
+// flexbox layout
+.pm-pane-container {
+	display: flex;
+	align-items: stretch;
+	flex-flow: row;
+	.pm-pane {
+		display: flex;
+		align-items: stretch;
+		flex-flow: row;
+		&.pm-alpha {
+			flex: 0 0 auto;
+		}
+		&.pm-beta {
+			flex: 0 0 auto;
+		}
+		&.pm-omega {
+			flex: 1 1 auto
+		}
+		.pm-pane-titlebar {
+			flex: 0 0 auto;
+			display: flex;
+			align-items: center;
+		}
+		.pm-pane-content {
+			flex: 1 1 auto
+		}
+	}
+}

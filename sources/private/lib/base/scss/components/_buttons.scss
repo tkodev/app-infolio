@@ -1,0 +1,82 @@
+.btn-group {
+	.btn {
+		margin: 0;
+	}
+}
+
+.pm-btn-controls {
+	padding: 0.25rem;
+	display: inline-block;
+	font-family: 'Font Awesome 5 Solid';
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: 1;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	& {
+		&::before {
+			content: "\F111";
+			height: 1rem;
+			width: 1rem;
+			display: block;
+			transition: $transition-default;
+		}
+		&.pm-minimize::before {
+			color: $yellow;
+		}
+		&.pm-maximize::before {
+			color: $green;
+			padding-top: 1px;
+		}
+		&.pm-close::before {
+			color: $red;
+		}
+	}
+	&:hover {
+		text-decoration: none;
+		&.pm-minimize::before {
+			content: "\F056";
+		}
+		&.pm-maximize::before {
+			content: "\F055";
+		}
+		&.pm-close::before {
+			content: "\F057";
+		}
+	}
+	&:focus {
+		&.pm-minimize::before {
+			text-shadow: 0 0 1rem rgba($yellow, 0.5)
+		}
+		&.pm-maximize::before {
+			text-shadow: 0 0 1rem rgba($green, 0.5)
+		}
+		&.pm-close::before {
+			text-shadow: 0 0 1rem rgba($red, 0.5)
+		}
+	}
+}
+
+.pm-btn-icon {
+	padding: 0.25rem;
+	&, i.fa {
+		line-height: $btn-icon-height;
+	}
+	span {
+		margin-left: 0.25rem;
+	}
+	+ .pm-btn-icon {
+		margin-left: 0.25rem;
+	}
+}
+
+.pm-btn-block {
+	&, span {
+		width: 100%;
+		display: block;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+}

@@ -7,7 +7,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const paths = {
 	"modules": path.resolve(__dirname, "node_modules"),
 	"public": path.resolve(__dirname, "public"),
-	"source": path.resolve(__dirname, "source")
+	"private": path.resolve(__dirname, "private")
 };
 
 let config = {
@@ -19,8 +19,8 @@ let config = {
 	target: 'electron',
 
 	entry: {
-		app: path.join(paths.source, "lib/base/js/app.js"),
-		vendor: path.join(paths.source, "lib/base/js/vendor.js")
+		app: path.join(paths.private, "lib/base/js/app.js"),
+		vendor: path.join(paths.private, "lib/base/js/vendor.js")
 	},
 
 	output: {
@@ -69,7 +69,7 @@ let config = {
 			Popper: "popper.js"
     }),
 		new HtmlWebpackPlugin({
-			template: "./source/index.html",
+			template: "./private/index.html",
 			filename: "index.html",
 			inject: "body"
 		}),

@@ -32,13 +32,18 @@ $font-family-base      : $font-family-sans-serif;
 $font-weight-light     : 300;
 $font-weight-normal    : 400;
 $font-weight-bold      : 700;
-$font-size-base        : 1rem;
-$line-height-base      : 1.5;
+$font-size-base        : 0.875rem;
+$line-height-base      : 1.125;
 
 // Core
 $grid-gutter-width     : 2rem;
 $border-default        : 1px solid $gray-200;
+$border-transparent    : 1px solid rgba($gray-600, 0.1);
+$transition-default    : all 0.2s ease;
 
 // Components
-$titlebar-height       : 3rem;
+$pane-alpha-width      : 16rem;
+$pane-beta-width       : 4rem;
+$pane-omega-width      : 4rem;
+$titlebar-height       : 4rem;
 $btn-icon-height       : 1rem;

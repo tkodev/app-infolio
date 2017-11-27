@@ -23,8 +23,8 @@ app.on('ready', () => {
 
 	// Create the browser window.
 	mainWindow = new BrowserWindow({
-		'min-height': 800,
-	  'min-width': 600,
+	  'minWidth': 1024,
+		'minHeight': 768,
 		'width': 1024,
 		'height': 768,
 		'frame': false
