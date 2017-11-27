@@ -1,12 +1,6 @@
 <template lang="pug">
 	#app
-		.pm-controls
-			a.pm-btn-controls.pm-maximize(href="#", aria-hidden="true")
-				span.sr-only Maximize
-			a.pm-btn-controls.pm-minimize(href="#", aria-hidden="true")
-				span.sr-only Minimize
-			a.pm-btn-controls.pm-close(href="#", aria-hidden="true")
-				span.sr-only Close
+		Controls
 		.pm-pane-container
 			.pm-pane.pm-alpha
 				.pm-pane-topbar
@@ -17,25 +11,28 @@
 						.pm-logo-tesc
 							| {{logoDesc}}
 				.pm-pane-content
-					|
+					| Test
 				.pm-pane-botbar
-					| test
+					| Test
 			.pm-pane.pm-beta
 				.pm-pane-topbar.justify-content-center
 					i.fa.fa-angle-double-right(aria-hidden="true", title="App Logo")
 				.pm-pane-content.justify-content-center
+					| Test
 				.pm-pane-botbar
-					| test
+					| Test
 			.pm-pane.pm-omega
 				.pm-pane-topbar
+					| Test
 				.pm-pane-content
-					| Text
+					| Test
 				.pm-pane-botbar
-					| test
+					| Test
 </template>
 
 <script>
 	import Navpane from './Navpane.vue'
+	import Controls from './Controls.vue'
 
 	// With shell.openExternal(url) is how
 	// external urls must be handled, not href
@@ -49,7 +46,8 @@
 			}
 		},
 		components: {
-			Navpane
+			Navpane,
+			Controls
 		},
 		methods: {
 			link: (url) => {

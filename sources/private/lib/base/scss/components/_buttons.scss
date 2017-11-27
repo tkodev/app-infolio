@@ -22,37 +22,37 @@
 			display: block;
 			transition: $transition-default;
 		}
-		&.pm-minimize::before {
+		&.pm-minimize-win::before {
 			color: $yellow;
 		}
-		&.pm-maximize::before {
+		&.pm-maximize-win::before {
 			color: $green;
 			padding-top: 1px;
 		}
-		&.pm-close::before {
+		&.pm-close-win::before {
 			color: $red;
 		}
 	}
 	&:hover {
 		text-decoration: none;
-		&.pm-minimize::before {
+		&.pm-minimize-win::before {
 			content: "\F056";
 		}
-		&.pm-maximize::before {
+		&.pm-maximize-win::before {
 			content: "\F055";
 		}
-		&.pm-close::before {
+		&.pm-close-win::before {
 			content: "\F057";
 		}
 	}
 	&:focus {
-		&.pm-minimize::before {
+		&.pm-minimize-win::before {
 			text-shadow: 0 0 1rem rgba($yellow, 0.5)
 		}
-		&.pm-maximize::before {
+		&.pm-maximize-win::before {
 			text-shadow: 0 0 1rem rgba($green, 0.5)
 		}
-		&.pm-close::before {
+		&.pm-close-win::before {
 			text-shadow: 0 0 1rem rgba($red, 0.5)
 		}
 	}
