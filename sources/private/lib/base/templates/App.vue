@@ -33,7 +33,7 @@
 	export default {
 		data() {
 			return {
-				appTitle: 'Portfolio Manager'
+				appTitle: 'InFolio'
 			}
 		},
 		components: {

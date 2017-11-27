@@ -8719,7 +8719,7 @@ const shell = __webpack_require__(15).shell
 /* harmony default export */ __webpack_exports__["a"] = ({
 	data() {
 		return {
-			appTitle: 'Portfolio Manager'
+			appTitle: 'InFolio'
 		}
 	},
 	components: {

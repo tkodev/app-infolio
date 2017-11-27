@@ -1,7 +1,7 @@
 {
-  "name": "HTKO-Portfolio-Manager",
+  "name": "InFolio",
   "version": "1.0.0",
-  "description": "Portfolio management desktop app built with Electron and React.",
+  "description": "Portfolio management app built with Electron and React.",
   "main": "main.js",
   "scripts": {
     "build:electron": "",
@@ -10,11 +10,11 @@
     "watch:alt": "webpack --watch & browser-sync start --localOnly --files './source' & electron ./"
   },
   "author": "Tony Ko <tony@htko.ca>",
-  "repository": "https://github.com/htkoca/htko-portfolio-manager.git",
+  "repository": "https://github.com/htkoca/infolio.git",
   "license": "",
   "build": {
-    "productName": "HTKO Portfolio Manager",
-    "appId": "ca.htko.portfolio-manager",
+    "productName": "InFolio",
+    "appId": "ca.htko.infolio",
     "mac": {
       "category": "public.app-category.developer-tools"
     }
