@@ -1,0 +1,28 @@
+// basic layout
+.pm-tree {
+	width: 100%;
+	height: 100%;
+	* {
+		border: 1px solid $red;
+	}
+}
+
+// flexbox layout
+.pm-tree {
+	display: flex;
+	flex-flow: column;
+	.pm-tree-topbar {
+		display: flex;
+		align-items: center;
+	}
+	.pm-tree-content {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		overflow: auto;
+	}
+	.pm-tree-botbar {
+		display: flex;
+		align-items: center;
+	}
+}

@@ -11,7 +11,7 @@
 						.pm-logo-tesc
 							| {{logoDesc}}
 				.pm-pane-content
-					| Test
+					Tree
 				.pm-pane-botbar
 					| Test
 			.pm-pane.pm-beta
@@ -31,7 +31,7 @@
 </template>
 
 <script>
-	import Navpane from './Navpane.vue'
+	import Tree from './Tree.vue'
 	import Controls from './Controls.vue'
 
 	// With shell.openExternal(url) is how
@@ -46,7 +46,7 @@
 			}
 		},
 		components: {
-			Navpane,
+			Tree,
 			Controls
 		},
 		methods: {
