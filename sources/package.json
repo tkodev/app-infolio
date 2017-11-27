@@ -1,7 +1,7 @@
 {
   "name": "InFolio",
   "version": "1.0.0",
-  "description": "Portfolio management app built with Electron and React.",
+  "description": "Portfolio management app built with Electron & Vue",
   "main": "main.js",
   "scripts": {
     "build:electron": "",

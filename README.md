@@ -1,6 +1,6 @@
 # InFolio - Portfolio Management
 
-Portfolio Manager built in Electron. Manages projects with the following directory tree:
+Portfolio management app built with Electron & Vue. Manages projects with the following directory tree:
 
 ## Typical Project Directory Tree
 
