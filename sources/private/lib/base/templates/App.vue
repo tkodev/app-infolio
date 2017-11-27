@@ -9,18 +9,29 @@
 				span.sr-only Close
 		.pm-pane-container
 			.pm-pane.pm-alpha
-				.pm-pane-titlebar
+				.pm-pane-topbar
 					.pm-logo
-						i.fa.fa-magic(aria-hidden="true", title="App Logo")
-						span {{appTitle}}
+						.pm-logo-title
+							i.fa.fa-magic(aria-hidden="true", title="App Logo")
+							| {{logoTitle}}
+						.pm-logo-tesc
+							| {{logoDesc}}
 				.pm-pane-content
-					//- Navpane
+					|
+				.pm-pane-botbar
+					| test
 			.pm-pane.pm-beta
-				.pm-pane-titlebar
+				.pm-pane-topbar.justify-content-center
+					i.fa.fa-angle-double-right(aria-hidden="true", title="App Logo")
+				.pm-pane-content.justify-content-center
+				.pm-pane-botbar
+					| test
 			.pm-pane.pm-omega
-				.pm-pane-titlebar
+				.pm-pane-topbar
 				.pm-pane-content
 					| Text
+				.pm-pane-botbar
+					| test
 </template>
 
 <script>
@@ -33,7 +44,8 @@
 	export default {
 		data() {
 			return {
-				appTitle: 'InFolio'
+				logoTitle: 'InFolio',
+				logoDesc: 'Portfolio Management'
 			}
 		},
 		components: {

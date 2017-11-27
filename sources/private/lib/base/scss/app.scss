@@ -6,7 +6,9 @@
 
 // Core Styles
 @import "core/globals";
-@import "core/helpers";
+
+// Utilities
+@import "utilities/helpers";
 
 // Components
 @import "components/pane";
