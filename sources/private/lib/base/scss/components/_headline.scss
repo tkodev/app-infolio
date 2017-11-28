@@ -1,17 +1,13 @@
-.pm-logo {
+.pm-headline {
 	white-space: nowrap;
-	.pm-logo-title {
+	.pm-title {
 		margin-right: 0.5rem;
 		height: $btn-icon-height;
 		line-height: $btn-icon-height;
-		font-weight: $font-weight-bold;
 		font-size: $font-size-lg;
 		margin-bottom: 0.25rem;
-		i {
-			margin-right: 0.25rem;
-		}
 	}
-	.pm-logo-desc {
+	.pm-desc {
 
 	}
 }

@@ -15,6 +15,7 @@
 			width: $pane-beta-width;
 			background-color: $gray-800;
 			color: $white;
+			text-align: center;
 		}
 		&.pm-omega {
 			width: $pane-omega-width;
@@ -69,7 +70,6 @@
 		}
 		.pm-pane-content {
 			flex: 1;
-			display: flex;
 			overflow: auto;
 		}
 		.pm-pane-botbar {

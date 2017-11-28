@@ -2,8 +2,11 @@
 .pm-tree {
 	width: 100%;
 	height: 100%;
-	* {
-		border: 1px solid $red;
+	.pm-tree-content {
+		margin: $grid-gutter-width/2 0;
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
 }
 

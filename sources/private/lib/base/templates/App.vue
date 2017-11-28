@@ -4,26 +4,41 @@
 		.pm-pane-container
 			.pm-pane.pm-alpha
 				.pm-pane-topbar
-					.pm-logo
-						.pm-logo-title
-							i.fa.fa-magic(aria-hidden="true", title="App Logo")
+					.pm-headline
+						.pm-title.bold
+							i.fa.fa-magic.mr-1(aria-hidden="true", title="App Logo")
 							| {{logoTitle}}
-						.pm-logo-tesc
+						.pm-desc
 							| {{logoDesc}}
 				.pm-pane-content
 					Tree
 				.pm-pane-botbar
-					| Test
+					.input-group.pm-stretch-x
+						input.form-control(type='text', placeholder="Search for project", aria-label="Search for project")
+						span.input-group-btn
+							button.btn.btn-outline-light(type='button')
+								i.fa.fa-search(aria-hidden="true", title="Search for Project")
 			.pm-pane.pm-beta
 				.pm-pane-topbar.justify-content-center
-					i.fa.fa-angle-double-right(aria-hidden="true", title="App Logo")
-				.pm-pane-content.justify-content-center
-					| Test
-				.pm-pane-botbar
-					| Test
+					i.fa.fa-angle-double-right(aria-hidden="true")
+				.pm-pane-content.p-0
+					button.pm-btn-icon
+						i.fal.fa-2x.fa-newspaper(aria-hidden="true")
+					button.pm-btn-icon
+						i.fal.fa-2x.fa-tags(aria-hidden="true")
+					button.pm-btn-icon
+						i.fal.fa-2x.fa-images(aria-hidden="true")
+				.pm-pane-botbar.justify-content-center
+					button
+						i.fa.fa-cog(aria-hidden="true")
 			.pm-pane.pm-omega
 				.pm-pane-topbar
-					| Test
+					.pm-headline
+						.pm-title
+							i.fa.fa-archive.mr-1(aria-hidden="true", title="App Logo")
+							| Project Name
+						.pm-desc
+							a(href="#") /path/to/project/directory
 				.pm-pane-content
 					| Test
 				.pm-pane-botbar

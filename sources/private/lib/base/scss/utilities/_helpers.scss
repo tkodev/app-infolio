@@ -1,12 +1,29 @@
-.stretch-x {
-	width: 100%;
+// typography
+.bold {
+	font-weight: $font-weight-bold;
+}
+.normal {
+	font-weight: $font-weight-normal;
+}
+.light {
+	font-weight: $font-weight-light;
 }
 
-.stretch-y {
-	height: 100%;
+// shapes
+.pm-square:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
 }
 
-.stretch {
+// stretch
+.pm-stretch {
 	height: 100%;
 	width: 100%;
+}
+.pm-stretch-x {
+	width: 100%;
+}
+.pm-stretch-y {
+	height: 100%;
 }

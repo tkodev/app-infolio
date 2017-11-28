@@ -1,10 +1,10 @@
 <template lang="pug">
 	.pm-controls
-		a.pm-btn-controls.pm-maximize-win(href="#", v-on:click="maximizeWin" aria-hidden="true")
+		button.pm-btn-controls.pm-maximize-win(v-on:click="maximizeWin" aria-hidden="true")
 			span.sr-only Maximize
-		a.pm-btn-controls.pm-minimize-win(href="#", v-on:click="minimizeWin" aria-hidden="true")
+		button.pm-btn-controls.pm-minimize-win(v-on:click="minimizeWin" aria-hidden="true")
 			span.sr-only Minimize
-		a.pm-btn-controls.pm-close-win(href="#", v-on:click="closeWin" aria-hidden="true")
+		button.pm-btn-controls.pm-close-win(v-on:click="closeWin" aria-hidden="true")
 			span.sr-only Close
 </template>
 

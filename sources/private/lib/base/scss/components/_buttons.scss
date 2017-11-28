@@ -1,9 +1,14 @@
-.btn-group {
-	.btn {
-		margin: 0;
+// button reset styles
+button {
+	border: 0;
+	background: none;
+	color: inherit;
+	&:focus {
+		outline: none;
 	}
 }
 
+// window chrome controls
 .pm-btn-controls {
 	padding: 0.25rem;
 	display: inline-block;
@@ -47,30 +52,18 @@
 	}
 	&:focus {
 		&.pm-minimize-win::before {
-			text-shadow: 0 0 1rem rgba($yellow, 0.5)
+			text-shadow: 0 0 1rem rgba($yellow, 0.8)
 		}
 		&.pm-maximize-win::before {
-			text-shadow: 0 0 1rem rgba($green, 0.5)
+			text-shadow: 0 0 1rem rgba($green, 0.8)
 		}
 		&.pm-close-win::before {
-			text-shadow: 0 0 1rem rgba($red, 0.5)
+			text-shadow: 0 0 1rem rgba($red, 0.8)
 		}
 	}
 }
 
-.pm-btn-icon {
-	padding: 0.25rem;
-	&, i {
-		line-height: $btn-icon-height;
-	}
-	span {
-		margin-left: 0.25rem;
-	}
-	+ .pm-btn-icon {
-		margin-left: 0.25rem;
-	}
-}
-
+// alpha pane buttons
 .pm-btn-block {
 	&, span {
 		width: 100%;
@@ -78,5 +71,28 @@
 		overflow: hidden;
 		white-space: nowrap;
 		text-overflow: ellipsis;
+	}
+}
+
+// beta pane icon buttons
+.pm-btn-icon {
+	position: relative;
+	width: 100%;
+	padding: 0.5rem;
+	margin-bottom: 0.25rem;
+	transition: $transition-default;
+	&:hover {
+		background-color: rgba($gray-600, 0.6);
+	}
+	i {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	&:before {
+	  content: "";
+	  display: block;
+	  padding-bottom: 100%;
 	}
 }
