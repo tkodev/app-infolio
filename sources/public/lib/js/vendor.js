@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 20);
+/******/ 	return __webpack_require__(__webpack_require__.s = 22);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -618,7 +618,7 @@ module.exports = function (css) {
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-solid-900.eot?ff861dec159d5b2cec1593b057c78ab0";
+module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-light-300.eot?6ab591a32482c982df418f3e572e7ead";
 
 /***/ }),
 /* 6 */
@@ -627,8 +627,18 @@ module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-solid-900.eo
 module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-regular-400.eot?0e775f053f8ff6a9a4ef186ae366465c";
 
 /***/ }),
-/* 7 */,
-/* 8 */,
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-solid-900.eot?ff861dec159d5b2cec1593b057c78ab0";
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-brands-900.eot?3e9ddceee8c1a39ee3a59c81542a6912";
+
+/***/ }),
 /* 9 */,
 /* 10 */,
 /* 11 */,
@@ -640,22 +650,24 @@ module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-regular-400.
 /* 17 */,
 /* 18 */,
 /* 19 */,
-/* 20 */
+/* 20 */,
+/* 21 */,
+/* 22 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__fontawesome_5_0_0_rc4_scss_fontawesome_pro_core_scss__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__fontawesome_5_0_0_rc4_scss_fontawesome_pro_core_scss__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__fontawesome_5_0_0_rc4_scss_fontawesome_pro_core_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__fontawesome_5_0_0_rc4_scss_fontawesome_pro_core_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__fontawesome_5_0_0_rc4_scss_fontawesome_pro_light_scss__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__fontawesome_5_0_0_rc4_scss_fontawesome_pro_light_scss__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__fontawesome_5_0_0_rc4_scss_fontawesome_pro_light_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__fontawesome_5_0_0_rc4_scss_fontawesome_pro_light_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__fontawesome_5_0_0_rc4_scss_fontawesome_pro_regular_scss__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__fontawesome_5_0_0_rc4_scss_fontawesome_pro_regular_scss__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__fontawesome_5_0_0_rc4_scss_fontawesome_pro_regular_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__fontawesome_5_0_0_rc4_scss_fontawesome_pro_regular_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__fontawesome_5_0_0_rc4_scss_fontawesome_pro_solid_scss__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__fontawesome_5_0_0_rc4_scss_fontawesome_pro_solid_scss__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__fontawesome_5_0_0_rc4_scss_fontawesome_pro_solid_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__fontawesome_5_0_0_rc4_scss_fontawesome_pro_solid_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__fontawesome_5_0_0_rc4_scss_fontawesome_pro_brands_scss__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__fontawesome_5_0_0_rc4_scss_fontawesome_pro_brands_scss__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__fontawesome_5_0_0_rc4_scss_fontawesome_pro_brands_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__fontawesome_5_0_0_rc4_scss_fontawesome_pro_brands_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__bootstrap_4_0_0_beta_2_js_bootstrap_js__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__bootstrap_4_0_0_beta_2_js_bootstrap_js__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__bootstrap_4_0_0_beta_2_js_bootstrap_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__bootstrap_4_0_0_beta_2_js_bootstrap_js__);
 
 
@@ -666,151 +678,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /***/ }),
-/* 21 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(22);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// Prepare cssTransformation
-var transform;
-
-var options = {"hmr":true}
-options.transform = transform
-// add the styles to the DOM
-var update = __webpack_require__(1)(content, options);
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/sass-loader/lib/loader.js!./fontawesome-pro-solid.scss", function() {
-			var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/sass-loader/lib/loader.js!./fontawesome-pro-solid.scss");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 22 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, "@font-face {\n  font-family: 'Font Awesome 5 Solid';\n  font-style: normal;\n  font-weight: 900;\n  src: url(" + __webpack_require__(5) + ");\n  src: url(" + __webpack_require__(5) + "?#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(23) + ") format(\"woff2\"), url(" + __webpack_require__(24) + ") format(\"woff\"), url(" + __webpack_require__(25) + ") format(\"truetype\"), url(" + __webpack_require__(26) + "#fontawesome) format(\"svg\"); }\n\n.fa,\n.fas {\n  font-family: 'Font Awesome 5 Solid';\n  font-weight: 900; }\n", ""]);
-
-// exports
-
-
-/***/ }),
 /* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-solid-900.woff2?bbfc9c566f6dc86d56b32c3b3eaecd81";
-
-/***/ }),
-/* 24 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-solid-900.woff?199d455c677859476c75cb354d6998ad";
-
-/***/ }),
-/* 25 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-solid-900.ttf?c4809ea34441809ec2eb8bdcc70846fd";
-
-/***/ }),
-/* 26 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-solid-900.svg?3a5d8ff1a9ed7343ebb20ff1554f6a16";
-
-/***/ }),
-/* 27 */
-/***/ (function(module, exports, __webpack_require__) {
-
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(28);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// Prepare cssTransformation
-var transform;
-
-var options = {"hmr":true}
-options.transform = transform
-// add the styles to the DOM
-var update = __webpack_require__(1)(content, options);
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/sass-loader/lib/loader.js!./fontawesome-pro-regular.scss", function() {
-			var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/sass-loader/lib/loader.js!./fontawesome-pro-regular.scss");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 28 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, "@font-face {\n  font-family: 'Font Awesome 5 Regular';\n  font-style: normal;\n  font-weight: 400;\n  src: url(" + __webpack_require__(6) + ");\n  src: url(" + __webpack_require__(6) + "?#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(29) + ") format(\"woff2\"), url(" + __webpack_require__(30) + ") format(\"woff\"), url(" + __webpack_require__(31) + ") format(\"truetype\"), url(" + __webpack_require__(32) + "#fontawesome) format(\"svg\"); }\n\n.far {\n  font-family: 'Font Awesome 5 Regular';\n  font-weight: 400; }\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 29 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-regular-400.woff2?ac5f0ec8ecb31ba100847f13b3cf58eb";
-
-/***/ }),
-/* 30 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-regular-400.woff?0d9349122852f5d5e99fc209b248e581";
-
-/***/ }),
-/* 31 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-regular-400.ttf?278a50a2775db9ca137d0b04d92c10de";
-
-/***/ }),
-/* 32 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-regular-400.svg?0a72541af5cbeaefd3a41c8655efb2ae";
-
-/***/ }),
-/* 33 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(34);
+var content = __webpack_require__(24);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -835,7 +709,7 @@ if(false) {
 }
 
 /***/ }),
-/* 34 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -849,7 +723,283 @@ exports.push([module.i, ".fa,\n.fas,\n.far,\n.fal,\n.fab {\n  -moz-osx-font-smoo
 
 
 /***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(26);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {"hmr":true}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/sass-loader/lib/loader.js!./fontawesome-pro-light.scss", function() {
+			var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/sass-loader/lib/loader.js!./fontawesome-pro-light.scss");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 26 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "@font-face {\n  font-family: 'Font Awesome 5 Light';\n  font-style: normal;\n  font-weight: 300;\n  src: url(" + __webpack_require__(5) + ");\n  src: url(" + __webpack_require__(5) + "?#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(27) + ") format(\"woff2\"), url(" + __webpack_require__(28) + ") format(\"woff\"), url(" + __webpack_require__(29) + ") format(\"truetype\"), url(" + __webpack_require__(30) + "#fontawesome) format(\"svg\"); }\n\n.fal {\n  font-family: 'Font Awesome 5 Light';\n  font-weight: 300; }\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-light-300.woff2?62be9e3b9bd937244f442f322a2d37c7";
+
+/***/ }),
+/* 28 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-light-300.woff?b0aaef162f90f28791a0a4b45672203f";
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-light-300.ttf?0a269fb7c37d1fdd4a7551962116bded";
+
+/***/ }),
+/* 30 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-light-300.svg?57383810a6bda6dac4f226866f2105fa";
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(32);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {"hmr":true}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/sass-loader/lib/loader.js!./fontawesome-pro-regular.scss", function() {
+			var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/sass-loader/lib/loader.js!./fontawesome-pro-regular.scss");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 32 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "@font-face {\n  font-family: 'Font Awesome 5 Regular';\n  font-style: normal;\n  font-weight: 400;\n  src: url(" + __webpack_require__(6) + ");\n  src: url(" + __webpack_require__(6) + "?#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(33) + ") format(\"woff2\"), url(" + __webpack_require__(34) + ") format(\"woff\"), url(" + __webpack_require__(35) + ") format(\"truetype\"), url(" + __webpack_require__(36) + "#fontawesome) format(\"svg\"); }\n\n.far {\n  font-family: 'Font Awesome 5 Regular';\n  font-weight: 400; }\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-regular-400.woff2?ac5f0ec8ecb31ba100847f13b3cf58eb";
+
+/***/ }),
+/* 34 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-regular-400.woff?0d9349122852f5d5e99fc209b248e581";
+
+/***/ }),
 /* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-regular-400.ttf?278a50a2775db9ca137d0b04d92c10de";
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-regular-400.svg?0a72541af5cbeaefd3a41c8655efb2ae";
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(38);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {"hmr":true}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/sass-loader/lib/loader.js!./fontawesome-pro-solid.scss", function() {
+			var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/sass-loader/lib/loader.js!./fontawesome-pro-solid.scss");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "@font-face {\n  font-family: 'Font Awesome 5 Solid';\n  font-style: normal;\n  font-weight: 900;\n  src: url(" + __webpack_require__(7) + ");\n  src: url(" + __webpack_require__(7) + "?#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(39) + ") format(\"woff2\"), url(" + __webpack_require__(40) + ") format(\"woff\"), url(" + __webpack_require__(41) + ") format(\"truetype\"), url(" + __webpack_require__(42) + "#fontawesome) format(\"svg\"); }\n\n.fa,\n.fas {\n  font-family: 'Font Awesome 5 Solid';\n  font-weight: 900; }\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-solid-900.woff2?bbfc9c566f6dc86d56b32c3b3eaecd81";
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-solid-900.woff?199d455c677859476c75cb354d6998ad";
+
+/***/ }),
+/* 41 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-solid-900.ttf?c4809ea34441809ec2eb8bdcc70846fd";
+
+/***/ }),
+/* 42 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-solid-900.svg?3a5d8ff1a9ed7343ebb20ff1554f6a16";
+
+/***/ }),
+/* 43 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(44);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {"hmr":true}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/sass-loader/lib/loader.js!./fontawesome-pro-brands.scss", function() {
+			var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/sass-loader/lib/loader.js!./fontawesome-pro-brands.scss");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 44 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "@font-face {\n  font-family: 'Font Awesome 5 Brands';\n  font-style: normal;\n  font-weight: 900;\n  src: url(" + __webpack_require__(8) + ");\n  src: url(" + __webpack_require__(8) + "?#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(45) + ") format(\"woff2\"), url(" + __webpack_require__(46) + ") format(\"woff\"), url(" + __webpack_require__(47) + ") format(\"truetype\"), url(" + __webpack_require__(48) + "#fontawesome) format(\"svg\"); }\n\n.fab {\n  font-family: 'Font Awesome 5 Brands';\n  font-weight: 900; }\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 45 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-brands-900.woff2?e69b361132f5368b16593cbffeaa0d96";
+
+/***/ }),
+/* 46 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-brands-900.woff?bdcd25064af54c98705a9d148b86e52e";
+
+/***/ }),
+/* 47 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-brands-900.ttf?42ddfa37b2c0f900cc36e454b430c725";
+
+/***/ }),
+/* 48 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-brands-900.svg?48b91898b6cf6ef38d133cfe6068743b";
+
+/***/ }),
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($, Popper) {/*!
@@ -4703,10 +4853,10 @@ return exports;
 }({},$,Popper));
 //# sourceMappingURL=bootstrap.js.map
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(36), __webpack_require__(37)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(50), __webpack_require__(51)))
 
 /***/ }),
-/* 36 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -14966,7 +15116,7 @@ return jQuery;
 
 
 /***/ }),
-/* 37 */
+/* 51 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17409,156 +17559,6 @@ Popper.Defaults = Defaults;
 /* harmony default export */ __webpack_exports__["default"] = (Popper);
 //# sourceMappingURL=popper.js.map
 
-
-/***/ }),
-/* 38 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-light-300.eot?6ab591a32482c982df418f3e572e7ead";
-
-/***/ }),
-/* 39 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-brands-900.eot?3e9ddceee8c1a39ee3a59c81542a6912";
-
-/***/ }),
-/* 40 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(41);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// Prepare cssTransformation
-var transform;
-
-var options = {"hmr":true}
-options.transform = transform
-// add the styles to the DOM
-var update = __webpack_require__(1)(content, options);
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/sass-loader/lib/loader.js!./fontawesome-pro-light.scss", function() {
-			var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/sass-loader/lib/loader.js!./fontawesome-pro-light.scss");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 41 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, "@font-face {\n  font-family: 'Font Awesome 5 Light';\n  font-style: normal;\n  font-weight: 300;\n  src: url(" + __webpack_require__(38) + ");\n  src: url(" + __webpack_require__(38) + "?#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(42) + ") format(\"woff2\"), url(" + __webpack_require__(43) + ") format(\"woff\"), url(" + __webpack_require__(44) + ") format(\"truetype\"), url(" + __webpack_require__(45) + "#fontawesome) format(\"svg\"); }\n\n.fal {\n  font-family: 'Font Awesome 5 Light';\n  font-weight: 300; }\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 42 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-light-300.woff2?62be9e3b9bd937244f442f322a2d37c7";
-
-/***/ }),
-/* 43 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-light-300.woff?b0aaef162f90f28791a0a4b45672203f";
-
-/***/ }),
-/* 44 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-light-300.ttf?0a269fb7c37d1fdd4a7551962116bded";
-
-/***/ }),
-/* 45 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-light-300.svg?57383810a6bda6dac4f226866f2105fa";
-
-/***/ }),
-/* 46 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(47);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// Prepare cssTransformation
-var transform;
-
-var options = {"hmr":true}
-options.transform = transform
-// add the styles to the DOM
-var update = __webpack_require__(1)(content, options);
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/sass-loader/lib/loader.js!./fontawesome-pro-brands.scss", function() {
-			var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/sass-loader/lib/loader.js!./fontawesome-pro-brands.scss");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 47 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, "@font-face {\n  font-family: 'Font Awesome 5 Brands';\n  font-style: normal;\n  font-weight: 900;\n  src: url(" + __webpack_require__(39) + ");\n  src: url(" + __webpack_require__(39) + "?#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(48) + ") format(\"woff2\"), url(" + __webpack_require__(49) + ") format(\"woff\"), url(" + __webpack_require__(50) + ") format(\"truetype\"), url(" + __webpack_require__(51) + "#fontawesome) format(\"svg\"); }\n\n.fab {\n  font-family: 'Font Awesome 5 Brands';\n  font-weight: 900; }\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 48 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-brands-900.woff2?e69b361132f5368b16593cbffeaa0d96";
-
-/***/ }),
-/* 49 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-brands-900.woff?bdcd25064af54c98705a9d148b86e52e";
-
-/***/ }),
-/* 50 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-brands-900.ttf?42ddfa37b2c0f900cc36e454b430c725";
-
-/***/ }),
-/* 51 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-brands-900.svg?48b91898b6cf6ef38d133cfe6068743b";
 
 /***/ })
 /******/ ]);

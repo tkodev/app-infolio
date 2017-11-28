@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -730,15 +730,17 @@ module.exports = require("electron");
 /***/ }),
 /* 5 */,
 /* 6 */,
-/* 7 */
+/* 7 */,
+/* 8 */,
+/* 9 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__scss_app_scss__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__scss_app_scss__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__scss_app_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__scss_app_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__templates_App_vue__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__templates_App_vue__ = __webpack_require__(13);
 
 
 
@@ -751,13 +753,13 @@ new __WEBPACK_IMPORTED_MODULE_1_vue__["a" /* default */]({
 
 
 /***/ }),
-/* 8 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(9);
+var content = __webpack_require__(11);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -782,7 +784,7 @@ if(false) {
 }
 
 /***/ }),
-/* 9 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -796,7 +798,7 @@ exports.push([module.i, "/*!\n * Bootstrap v4.0.0-beta.2 (https://getbootstrap.c
 
 
 /***/ }),
-/* 10 */
+/* 12 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8634,12 +8636,12 @@ Vue$3.nextTick(function () {
 
 
 /***/ }),
-/* 11 */
+/* 13 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_App_vue__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_26b678d1_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_template_compiler_preprocessor_engine_pug_node_modules_vue_loader_lib_selector_type_template_index_0_bustCache_App_vue__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_App_vue__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_26b678d1_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_template_compiler_preprocessor_engine_pug_node_modules_vue_loader_lib_selector_type_template_index_0_bustCache_App_vue__ = __webpack_require__(21);
 var disposed = false
 var normalizeComponent = __webpack_require__(3)
 /* script */
@@ -8685,12 +8687,12 @@ if (false) {(function () {
 
 
 /***/ }),
-/* 12 */
+/* 14 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Tree_vue__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Controls_vue__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Tree_vue__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Controls_vue__ = __webpack_require__(18);
 //
 //
 //
@@ -8739,15 +8741,14 @@ if (false) {(function () {
 //
 //
 
+// init
 
 
-
-// With shell.openExternal(url) is how
-// external urls must be handled, not href
-const shell = __webpack_require__(4).shell
-
+// With shell.openExternal(url) is how external urls must be handled, not href
+const {shell} = __webpack_require__(4)
+// settings
 /* harmony default export */ __webpack_exports__["a"] = ({
-	data() {
+	data: function() {
 		return {
 			logoTitle: 'InFolio',
 			logoDesc: 'Portfolio Management'
@@ -8766,12 +8767,12 @@ const shell = __webpack_require__(4).shell
 
 
 /***/ }),
-/* 13 */
+/* 15 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_Tree_vue__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_808714c4_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_template_compiler_preprocessor_engine_pug_node_modules_vue_loader_lib_selector_type_template_index_0_bustCache_Tree_vue__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_Tree_vue__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_808714c4_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_template_compiler_preprocessor_engine_pug_node_modules_vue_loader_lib_selector_type_template_index_0_bustCache_Tree_vue__ = __webpack_require__(17);
 var disposed = false
 var normalizeComponent = __webpack_require__(3)
 /* script */
@@ -8817,7 +8818,7 @@ if (false) {(function () {
 
 
 /***/ }),
-/* 14 */
+/* 16 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8832,55 +8833,34 @@ if (false) {(function () {
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
+// init
+const {ipcRenderer} = __webpack_require__(4);
+// settings
 /* harmony default export */ __webpack_exports__["a"] = ({
-    data () {
-        return {
-            browsePlaceholder: 'Open Portfolio Root'
-        }
-    }
+	data: function() {
+		return {
+			rootDefault: 'Open Portfolio Root',
+			rootPath: '',
+			rootTree: {}
+		}
+	},
+	methods: {
+		openFolioRoot: () => {
+			ipcRenderer.send('getRootPath', 'pingo')
+	  }
+	},
+	mounted: function() {
+	  ipcRenderer.on('returnRootPath', (event, arg) => {
+			Vue.set(this, rootPath, arg.rootPath)
+			Vue.set(this, rootTree, arg.rootTree)
+	  })
+	}
 });
 
 
 /***/ }),
-/* 15 */
+/* 17 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8888,78 +8868,38 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0, false, false)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "pm-tree" }, [
-      _c("div", { staticClass: "pm-tree-topbar" }, [
-        _c("div", { staticClass: "btn-group pm-stretch-x" }, [
-          _c(
-            "button",
-            {
-              staticClass: "btn btn-outline-light pm-btn-block",
-              attrs: { type: "button" }
-            },
-            [_vm._v("Open Portfolio Root")]
-          ),
-          _c(
-            "button",
-            { staticClass: "btn btn-outline-light", attrs: { type: "button" } },
-            [
-              _c("i", {
-                staticClass: "fa fa-folder-open",
-                attrs: { "aria-hidden": "true", title: "Browse" }
-              })
-            ]
-          )
-        ])
-      ]),
-      _c("div", { staticClass: "pm-tree-content" }, [
-        _c("p", [_vm._v("Tree")]),
-        _c("p", [_vm._v("Tree")]),
-        _c("p", [_vm._v("Tree")]),
-        _c("p", [_vm._v("Tree")]),
-        _c("p", [_vm._v("Tree")]),
-        _c("p", [_vm._v("Tree")]),
-        _c("p", [_vm._v("Tree")]),
-        _c("p", [_vm._v("Tree")]),
-        _c("p", [_vm._v("Tree")]),
-        _c("p", [_vm._v("Tree")]),
-        _c("p", [_vm._v("Tree")]),
-        _c("p", [_vm._v("Tree")]),
-        _c("p", [_vm._v("Tree")]),
-        _c("p", [_vm._v("Tree")]),
-        _c("p", [_vm._v("Tree")]),
-        _c("p", [_vm._v("Tree")]),
-        _c("p", [_vm._v("Tree")]),
-        _c("p", [_vm._v("Tree")]),
-        _c("p", [_vm._v("Tree")]),
-        _c("p", [_vm._v("Tree")]),
-        _c("p", [_vm._v("Tree")]),
-        _c("p", [_vm._v("Tree")]),
-        _c("p", [_vm._v("Tree")]),
-        _c("p", [_vm._v("Tree")]),
-        _c("p", [_vm._v("Tree")]),
-        _c("p", [_vm._v("Tree")]),
-        _c("p", [_vm._v("Tree")]),
-        _c("p", [_vm._v("Tree")]),
-        _c("p", [_vm._v("Tree")]),
-        _c("p", [_vm._v("Tree")]),
-        _c("p", [_vm._v("Tree")]),
-        _c("p", [_vm._v("Tree")]),
-        _c("p", [_vm._v("Tree")]),
-        _c("p", [_vm._v("Tree")]),
-        _c("p", [_vm._v("Tree")]),
-        _c("p", [_vm._v("Tree")]),
-        _c("p", [_vm._v("Tree")])
+  return _c("div", { staticClass: "pm-tree" }, [
+    _c("div", { staticClass: "pm-tree-topbar" }, [
+      _c("div", { staticClass: "btn-group pm-stretch-x" }, [
+        _c(
+          "button",
+          {
+            staticClass: "btn btn-outline-light pm-btn-block",
+            attrs: { type: "button" },
+            on: { click: _vm.openFolioRoot }
+          },
+          [_vm._v(_vm._s(_vm.rootDefault) + " " + _vm._s(_vm.rootPath))]
+        ),
+        _c(
+          "button",
+          {
+            staticClass: "btn btn-outline-light",
+            attrs: { type: "button" },
+            on: { click: _vm.openFolioRoot }
+          },
+          [
+            _c("i", {
+              staticClass: "fa fa-folder-open",
+              attrs: { "aria-hidden": "true", title: "Browse" }
+            })
+          ]
+        )
       ])
-    ])
-  }
-]
+    ]),
+    _c("div", { staticClass: "pm-tree-content" })
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
@@ -8971,12 +8911,12 @@ if (false) {
 }
 
 /***/ }),
-/* 16 */
+/* 18 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_Controls_vue__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_174e88b6_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_template_compiler_preprocessor_engine_pug_node_modules_vue_loader_lib_selector_type_template_index_0_bustCache_Controls_vue__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_Controls_vue__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_174e88b6_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_template_compiler_preprocessor_engine_pug_node_modules_vue_loader_lib_selector_type_template_index_0_bustCache_Controls_vue__ = __webpack_require__(20);
 var disposed = false
 var normalizeComponent = __webpack_require__(3)
 /* script */
@@ -9022,7 +8962,7 @@ if (false) {(function () {
 
 
 /***/ }),
-/* 17 */
+/* 19 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9037,8 +8977,10 @@ if (false) {(function () {
 //
 //
 
-const remote = __webpack_require__(4).remote;
+// init
+const {remote} = __webpack_require__(4);
 const curWin = remote.getCurrentWindow();
+// settings
 /* harmony default export */ __webpack_exports__["a"] = ({
 	methods: {
 		maximizeWin: () => {
@@ -9047,19 +8989,13 @@ const curWin = remote.getCurrentWindow();
 			} else {
 				curWin.maximize();
 			}
-	  },
-		minimizeWin: () => {
-	    curWin.minimize();
-	  },
-	  closeWin: () => {
-	    curWin.close();
 	  }
 	}
 });
 
 
 /***/ }),
-/* 18 */
+/* 20 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9109,7 +9045,7 @@ if (false) {
 }
 
 /***/ }),
-/* 19 */
+/* 21 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

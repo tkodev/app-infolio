@@ -46,15 +46,14 @@
 </template>
 
 <script>
+	// init
 	import Tree from './Tree.vue'
 	import Controls from './Controls.vue'
-
-	// With shell.openExternal(url) is how
-	// external urls must be handled, not href
-	const shell = require('electron').shell
-
+	// With shell.openExternal(url) is how external urls must be handled, not href
+	const {shell} = require('electron')
+	// settings
 	export default {
-		data() {
+		data: function() {
 			return {
 				logoTitle: 'InFolio',
 				logoDesc: 'Portfolio Management'
