@@ -42,14 +42,10 @@ app.on('ready', () => {
 })
 
 // ipc event - open-portfolio-root
-ipcMain.on('getRootPath', (event, arg) => {
-	var rootPath = dialog.showOpenDialog(mainWindow, {
+ipcMain.on('getRootTree', (event, arg) => {
+	var rootArr = dialog.showOpenDialog(mainWindow, {
     properties: ['openDirectory']
   })
-	var rootTree = dirTree(rootPath[0]);
-  // event.returnValue = 'pong'
-	event.sender.send('returnRootPath', {
-		rootPath,
-		rootTree
-	})
+	var rootTree = rootArr != false ? dirTree(rootArr[0]) : {};
+	event.sender.send('returnRootTree', rootTree)
 })

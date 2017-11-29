@@ -8833,6 +8833,8 @@ if (false) {(function () {
 //
 //
 //
+//
+//
 
 // init
 const {ipcRenderer} = __webpack_require__(4);
@@ -8841,20 +8843,29 @@ const {ipcRenderer} = __webpack_require__(4);
 	data: function() {
 		return {
 			rootDefault: 'Open Portfolio Root',
-			rootPath: '',
-			rootTree: {}
+			rootTree: {
+				name: '',
+				path: '',
+				tree: {}
+			},
+			loading: false
 		}
 	},
 	methods: {
 		openFolioRoot: () => {
-			ipcRenderer.send('getRootPath', 'pingo')
+			ipcRenderer.send('getRootTree')
 	  }
 	},
 	mounted: function() {
-	  ipcRenderer.on('returnRootPath', (event, arg) => {
-			Vue.set(this, rootPath, arg.rootPath)
-			Vue.set(this, rootTree, arg.rootTree)
-	  })
+	  ipcRenderer.on('returnRootTree', (event, rootTree) => {
+			this.rootTree = rootTree;
+			this.loading = false
+		})
+	},
+	watch: {
+		rootTree: function(val){
+			console.log("rootTree", val);
+		}
 	}
 });
 
@@ -8878,7 +8889,7 @@ var render = function() {
             attrs: { type: "button" },
             on: { click: _vm.openFolioRoot }
           },
-          [_vm._v(_vm._s(_vm.rootDefault) + " " + _vm._s(_vm.rootPath))]
+          [_vm._v(_vm._s(_vm.rootTree.name || _vm.rootDefault))]
         ),
         _c(
           "button",
@@ -8896,7 +8907,12 @@ var render = function() {
         )
       ])
     ]),
-    _c("div", { staticClass: "pm-tree-content" })
+    _c(
+      "div",
+      { staticClass: "pm-tree-content" },
+      [_vm.rootTree.name && _vm.rootTree.path ? [_vm._v("test")] : _vm._e()],
+      2
+    )
   ])
 }
 var staticRenderFns = []
@@ -8989,7 +9005,13 @@ const curWin = remote.getCurrentWindow();
 			} else {
 				curWin.maximize();
 			}
-	  }
+	  },
+		minimizeWin: () => {
+			curWin.minimize();
+		},
+		closeWin: () => {
+			curWin.close();
+		}
 	}
 });
 

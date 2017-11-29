@@ -21,7 +21,13 @@
 				} else {
 					curWin.maximize();
 				}
-		  }
+		  },
+			minimizeWin: () => {
+				curWin.minimize();
+			},
+			closeWin: () => {
+				curWin.close();
+			}
 		}
 	}
 </script>

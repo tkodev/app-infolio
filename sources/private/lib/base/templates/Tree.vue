@@ -3,10 +3,12 @@
 		.pm-tree-topbar
 			.btn-group.pm-stretch-x
 				button.btn.btn-outline-light.pm-btn-block(type='button', v-on:click="openFolioRoot")
-					| {{rootDefault}} {{rootPath}}
+					| {{rootTree.name || rootDefault}}
 				button.btn.btn-outline-light(type='button', v-on:click="openFolioRoot")
 					i.fa.fa-folder-open(aria-hidden="true", title="Browse")
 		.pm-tree-content
+			template(v-if="rootTree.name && rootTree.path")
+				| test
 </template>
 
 <script>
@@ -17,20 +19,29 @@
 		data: function() {
 			return {
 				rootDefault: 'Open Portfolio Root',
-				rootPath: '',
-				rootTree: {}
+				rootTree: {
+					name: '',
+					path: '',
+					tree: {}
+				},
+				loading: false
 			}
 		},
 		methods: {
 			openFolioRoot: () => {
-				ipcRenderer.send('getRootPath', 'pingo')
+				ipcRenderer.send('getRootTree')
 		  }
 		},
 		mounted: function() {
-		  ipcRenderer.on('returnRootPath', (event, arg) => {
-				Vue.set(this, rootPath, arg.rootPath)
-				Vue.set(this, rootTree, arg.rootTree)
-		  })
+		  ipcRenderer.on('returnRootTree', (event, rootTree) => {
+				this.rootTree = rootTree;
+				this.loading = false
+			})
+		},
+		watch: {
+			rootTree: function(val){
+				console.log("rootTree", val);
+			}
 		}
 	}
 </script>
