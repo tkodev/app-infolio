@@ -8835,6 +8835,8 @@ if (false) {(function () {
 //
 //
 //
+//
+//
 
 // init
 const {ipcRenderer} = __webpack_require__(4);
@@ -8852,7 +8854,8 @@ const {ipcRenderer} = __webpack_require__(4);
 		}
 	},
 	methods: {
-		openFolioRoot: () => {
+		openFolioRoot: function(){
+			this.loading = true
 			ipcRenderer.send('getRootTree')
 	  }
 	},
@@ -8867,6 +8870,9 @@ const {ipcRenderer} = __webpack_require__(4);
 		})
 	},
 	watch: {
+		loading: function(val){
+			console.log("loading", val);
+		},
 		rootTree: function(val){
 			console.log("rootTree", val);
 		}
@@ -8914,7 +8920,16 @@ var render = function() {
     _c(
       "div",
       { staticClass: "pm-tree-content" },
-      [_vm.rootTree.name && _vm.rootTree.path ? [_vm._v("test")] : _vm._e()],
+      [
+        _vm.loading ? [_vm._v(_vm._s(_vm.loading + ""))] : _vm._e(),
+        _vm.rootTree.name
+          ? [
+              _vm._v(
+                _vm._s(_vm.rootTree.name) + " " + _vm._s(_vm.rootTree.path)
+              )
+            ]
+          : _vm._e()
+      ],
       2
     )
   ])
