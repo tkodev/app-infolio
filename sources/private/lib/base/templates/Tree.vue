@@ -33,7 +33,7 @@
 		  }
 		},
 		mounted: function() {
-		  ipcRenderer.on('returnRootTree', (event, rootTree) => {
+		  ipcRenderer.on('getRootTree', (event, rootTree) => {
 				this.rootTree = rootTree;
 				this.loading = false
 			})

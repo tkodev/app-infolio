@@ -8857,7 +8857,7 @@ const {ipcRenderer} = __webpack_require__(4);
 	  }
 	},
 	mounted: function() {
-	  ipcRenderer.on('returnRootTree', (event, rootTree) => {
+	  ipcRenderer.on('getRootTree', (event, rootTree) => {
 			this.rootTree = rootTree;
 			this.loading = false
 		})

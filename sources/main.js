@@ -2,7 +2,9 @@
 const electron = require('electron')
 const {app, BrowserWindow, dialog, ipcMain} = electron
 const path = require('path')
-const dirTree = require('directory-tree');
+const {fork} = require('child_process');
+const death = require('death'); //this is intentionally ugly
+var forks = [];
 
 // Let electron reloads by itself when webpack watches changes in ./app/
 // require('electron-reload')(__dirname)
@@ -12,6 +14,7 @@ require('electron-reload')(__dirname, {
 
 // To avoid being garbage collected
 let mainWindow;
+let backWindow;
 
 // app event - 'window-all-closed'
 app.on('window-all-closed', () => {
@@ -25,27 +28,42 @@ app.on('window-all-closed', () => {
 app.on('ready', () => {
 	// Create the browser window.
 	mainWindow = new BrowserWindow({
-	  'minWidth': 1024,
-		'minHeight': 768,
-		'width': 1024,
-		'height': 768,
-		'frame': false
+	  minWidth: 1024,
+		minHeight: 768,
+		width: 1024,
+		height: 768,
+		frame: false
 	});
-	// and load the index.html of the app.
-  mainWindow.loadURL(`file://${__dirname}/public/index.html`)
-	// Open the DevTools.
-	//mainWindow.openDevTools();
+	// Load the index.html of the app.
+	mainWindow.loadURL(`file://${__dirname}/public/index.html`)
 	// Emitted when the window is closed.
 	mainWindow.on('closed', () => {
+		cleanup();
 		mainWindow = null;
 	});
 })
 
-// ipc event - open-portfolio-root
+// ipc event - get root tree
 ipcMain.on('getRootTree', (event, arg) => {
 	var rootArr = dialog.showOpenDialog(mainWindow, {
-    properties: ['openDirectory']
-  })
-	var rootTree = rootArr != false ? dirTree(rootArr[0]) : {};
-	event.sender.send('returnRootTree', rootTree)
+		properties: ['openDirectory']
+	})
+	var compute = fork(`${__dirname}/compute.js`);
+	forks.push(compute);
+	compute.send(rootArr);
+	compute.on('message', function(rootTree){
+		mainWindow.webContents.send('getRootTree', rootTree)
+		compute.kill('SIGHUP');
+	});
 })
+
+function cleanup(signal, err) {
+	console.log(`\n[cleanup] Killing ${forks.length} forked processes\n`);
+	forks.forEach(function(element){
+		try {
+			element.kill('SIGHUP');
+		} finally {}
+	})
+}
+
+death(cleanup)

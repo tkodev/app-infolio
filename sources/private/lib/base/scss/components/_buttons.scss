@@ -82,7 +82,7 @@ button {
 	margin-bottom: 0.25rem;
 	transition: $transition-default;
 	&:hover {
-		background-color: rgba($gray-600, 0.6);
+		background-color: $hover-icon-default;
 	}
 	i {
 		position: absolute;
