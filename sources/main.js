@@ -59,9 +59,7 @@ death(cleanup)
 
 // cleanup function
 function cleanup(signal, err) {
-	console.log(`\n*********`);
-	console.log(`[cleanup] Killing ${forks.length} forked processes`);
-	console.log(`*********\n`);
+	console.log(`[main] killing ${forks.length} forked processes`);
 	forks.forEach(function(element){
 		try {
 			element.kill('SIGHUP');
@@ -76,14 +74,27 @@ function cleanup(signal, err) {
 
 // ipc event - get root tree
 ipcMain.on('getRootTree', (event, arg) => {
-	var rootArr = dialog.showOpenDialog(mainWindow, {
+	var dialogRslt = dialog.showOpenDialog(mainWindow, {
 		properties: ['openDirectory']
 	})
-	var compute = fork(`${__dirname}/compute.js`);
-	forks.push(compute);
-	compute.send(rootArr);
-	compute.on('message', function(rootTree){
-		mainWindow.webContents.send('getRootTree', rootTree)
-		compute.kill('SIGHUP');
-	});
+	if( dialogRslt && dialogRslt != false ){
+		console.log('[main] sending message');
+		var compute = fork(`${__dirname}/compute.js`);
+		forks.push(compute);
+		compute.send(dialogRslt);
+		console.log('[main] await reply');
+		compute.on('message', function(rootTree){
+			console.log('[main] return to app');
+			mainWindow.webContents.send('getRootTree', rootTree)
+			compute.kill('SIGHUP')
+		});
+	} else {
+		console.log('[main] return to app');
+		mainWindow.webContents.send('getRootTree', {})
+	}
+})
+
+// ipc event - kill forks
+ipcMain.on('killForks', (event, arg) => {
+	cleanup();
 })
