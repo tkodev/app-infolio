@@ -5,10 +5,9 @@
 // init
 const electron = require('electron');
 const {app, BrowserWindow, dialog, ipcMain} = electron;
-const {fork} = require('child_process');
+const tasksEngine = require('./tasks-engine.js')(electron, './tasks.js');
 const path = require('path');
-const death = require('death'); //this is intentionally ugly
-var forks = [];
+const death = require('death');
 
 
 // ****************************************************************************************************
@@ -29,8 +28,9 @@ require('electron-reload')(__dirname, {
 // avoid garbage collection
 let mainWindow;
 
-// create the browser window.
+// app ready
 app.on('ready', () => {
+	// create the browser window.
 	mainWindow = new BrowserWindow({
 	  minWidth: 1024,
 		minHeight: 768,
@@ -42,6 +42,14 @@ app.on('ready', () => {
 	mainWindow.on('closed', () => {
 		cleanup();
 		mainWindow = null;
+	});
+	// tasks - create a task on ipc channel "test", returning data for use in task
+	tasksEngine.init(mainWindow, {
+		channel: "getRootTree",
+		data: function(){
+			return dialog.showOpenDialog(mainWindow, {properties: ['openDirectory']})
+		},
+		timeout: 3000
 	});
 })
 
@@ -59,42 +67,5 @@ death(cleanup)
 
 // cleanup function
 function cleanup(signal, err) {
-	console.log(`[main] killing ${forks.length} forked processes`);
-	forks.forEach(function(element){
-		try {
-			element.kill('SIGHUP');
-		} finally {}
-	})
+	tasksEngine.kill();
 }
-
-
-// ****************************************************************************************************
-// Events
-// ****************************************************************************************************
-
-// ipc event - get root tree
-ipcMain.on('getRootTree', (event, arg) => {
-	var dialogRslt = dialog.showOpenDialog(mainWindow, {
-		properties: ['openDirectory']
-	})
-	if( dialogRslt && dialogRslt != false ){
-		console.log('[main] sending message');
-		var compute = fork(`${__dirname}/compute.js`);
-		forks.push(compute);
-		compute.send(dialogRslt);
-		console.log('[main] await reply');
-		compute.on('message', function(rootTree){
-			console.log('[main] return to app');
-			mainWindow.webContents.send('getRootTree', rootTree)
-			compute.kill('SIGHUP')
-		});
-	} else {
-		console.log('[main] return to app');
-		mainWindow.webContents.send('getRootTree', {})
-	}
-})
-
-// ipc event - kill forks
-ipcMain.on('killForks', (event, arg) => {
-	cleanup();
-})
