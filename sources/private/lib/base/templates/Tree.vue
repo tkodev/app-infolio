@@ -36,9 +36,9 @@
 		  }
 		},
 		mounted: function() {
-		  ipcRenderer.on('getRootTree', (event, rootTree) => {
-				if(rootTree){
-					this.rootTree = rootTree;
+		  ipcRenderer.on('getRootTree', (event, arg) => {
+				if(arg){
+					this.rootTree = arg;
 					this.loading = false
 				} else {
 					this.loading = false
