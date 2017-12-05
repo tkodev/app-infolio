@@ -615,31 +615,31 @@ module.exports = function (css) {
 
 /***/ }),
 /* 4 */,
-/* 5 */,
-/* 6 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-light-300.eot?6ab591a32482c982df418f3e572e7ead";
 
 /***/ }),
-/* 7 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-regular-400.eot?0e775f053f8ff6a9a4ef186ae366465c";
 
 /***/ }),
-/* 8 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-solid-900.eot?ff861dec159d5b2cec1593b057c78ab0";
 
 /***/ }),
-/* 9 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "lib/fonts/fontawesome-pro-brands-900.eot?3e9ddceee8c1a39ee3a59c81542a6912";
 
 /***/ }),
+/* 9 */,
 /* 10 */,
 /* 11 */,
 /* 12 */,
@@ -765,7 +765,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: 'Font Awesome 5 Light';\n  font-style: normal;\n  font-weight: 300;\n  src: url(" + __webpack_require__(6) + ");\n  src: url(" + __webpack_require__(6) + "?#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(30) + ") format(\"woff2\"), url(" + __webpack_require__(31) + ") format(\"woff\"), url(" + __webpack_require__(32) + ") format(\"truetype\"), url(" + __webpack_require__(33) + "#fontawesome) format(\"svg\"); }\n\n.fal {\n  font-family: 'Font Awesome 5 Light';\n  font-weight: 300; }\n", ""]);
+exports.push([module.i, "@font-face {\n  font-family: 'Font Awesome 5 Light';\n  font-style: normal;\n  font-weight: 300;\n  src: url(" + __webpack_require__(5) + ");\n  src: url(" + __webpack_require__(5) + "?#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(30) + ") format(\"woff2\"), url(" + __webpack_require__(31) + ") format(\"woff\"), url(" + __webpack_require__(32) + ") format(\"truetype\"), url(" + __webpack_require__(33) + "#fontawesome) format(\"svg\"); }\n\n.fal {\n  font-family: 'Font Awesome 5 Light';\n  font-weight: 300; }\n", ""]);
 
 // exports
 
@@ -834,7 +834,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: 'Font Awesome 5 Regular';\n  font-style: normal;\n  font-weight: 400;\n  src: url(" + __webpack_require__(7) + ");\n  src: url(" + __webpack_require__(7) + "?#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(36) + ") format(\"woff2\"), url(" + __webpack_require__(37) + ") format(\"woff\"), url(" + __webpack_require__(38) + ") format(\"truetype\"), url(" + __webpack_require__(39) + "#fontawesome) format(\"svg\"); }\n\n.far {\n  font-family: 'Font Awesome 5 Regular';\n  font-weight: 400; }\n", ""]);
+exports.push([module.i, "@font-face {\n  font-family: 'Font Awesome 5 Regular';\n  font-style: normal;\n  font-weight: 400;\n  src: url(" + __webpack_require__(6) + ");\n  src: url(" + __webpack_require__(6) + "?#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(36) + ") format(\"woff2\"), url(" + __webpack_require__(37) + ") format(\"woff\"), url(" + __webpack_require__(38) + ") format(\"truetype\"), url(" + __webpack_require__(39) + "#fontawesome) format(\"svg\"); }\n\n.far {\n  font-family: 'Font Awesome 5 Regular';\n  font-weight: 400; }\n", ""]);
 
 // exports
 
@@ -903,7 +903,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: 'Font Awesome 5 Solid';\n  font-style: normal;\n  font-weight: 900;\n  src: url(" + __webpack_require__(8) + ");\n  src: url(" + __webpack_require__(8) + "?#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(42) + ") format(\"woff2\"), url(" + __webpack_require__(43) + ") format(\"woff\"), url(" + __webpack_require__(44) + ") format(\"truetype\"), url(" + __webpack_require__(45) + "#fontawesome) format(\"svg\"); }\n\n.fa,\n.fas {\n  font-family: 'Font Awesome 5 Solid';\n  font-weight: 900; }\n", ""]);
+exports.push([module.i, "@font-face {\n  font-family: 'Font Awesome 5 Solid';\n  font-style: normal;\n  font-weight: 900;\n  src: url(" + __webpack_require__(7) + ");\n  src: url(" + __webpack_require__(7) + "?#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(42) + ") format(\"woff2\"), url(" + __webpack_require__(43) + ") format(\"woff\"), url(" + __webpack_require__(44) + ") format(\"truetype\"), url(" + __webpack_require__(45) + "#fontawesome) format(\"svg\"); }\n\n.fa,\n.fas {\n  font-family: 'Font Awesome 5 Solid';\n  font-weight: 900; }\n", ""]);
 
 // exports
 
@@ -972,7 +972,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: 'Font Awesome 5 Brands';\n  font-style: normal;\n  font-weight: 900;\n  src: url(" + __webpack_require__(9) + ");\n  src: url(" + __webpack_require__(9) + "?#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(48) + ") format(\"woff2\"), url(" + __webpack_require__(49) + ") format(\"woff\"), url(" + __webpack_require__(50) + ") format(\"truetype\"), url(" + __webpack_require__(51) + "#fontawesome) format(\"svg\"); }\n\n.fab {\n  font-family: 'Font Awesome 5 Brands';\n  font-weight: 900; }\n", ""]);
+exports.push([module.i, "@font-face {\n  font-family: 'Font Awesome 5 Brands';\n  font-style: normal;\n  font-weight: 900;\n  src: url(" + __webpack_require__(8) + ");\n  src: url(" + __webpack_require__(8) + "?#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(48) + ") format(\"woff2\"), url(" + __webpack_require__(49) + ") format(\"woff\"), url(" + __webpack_require__(50) + ") format(\"truetype\"), url(" + __webpack_require__(51) + "#fontawesome) format(\"svg\"); }\n\n.fab {\n  font-family: 'Font Awesome 5 Brands';\n  font-weight: 900; }\n", ""]);
 
 // exports
 

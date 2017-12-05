@@ -1,6 +1,6 @@
 <template lang="pug">
 	#app
-		Controls
+		controls
 		.pm-pane-container
 			.pm-pane.pm-alpha
 				.pm-pane-topbar
@@ -11,7 +11,7 @@
 						.pm-desc
 							| {{logoDesc}}
 				.pm-pane-content
-					Tree
+					tree
 				.pm-pane-botbar
 					.input-group.pm-stretch-x
 						input.form-control(type='text', placeholder="Search for project", aria-label="Search for project")
@@ -47,9 +47,8 @@
 
 <script>
 	// init
-	import Tree from './Tree.vue'
-	import TreeEntry from './TreeEntry.vue'
-	import Controls from './Controls.vue'
+	import Tree from 'Templates/Tree.vue'
+	import Controls from 'Templates/Controls.vue'
 	// With shell.openExternal(url) is how external urls must be handled, not href
 	const {shell} = require('electron')
 	// settings
@@ -61,8 +60,8 @@
 			}
 		},
 		components: {
-			Tree,
-			Controls
+			'tree': Tree,
+			'controls': Controls
 		},
 		methods: {
 			link: (url) => {

@@ -1,0 +1,13 @@
+.pm-tree-file {
+	.pm-tree-entry {
+		margin: 0.5rem 0;
+		font-weight: $font-weight-light;
+		.pm-tree-icon {
+			width: 1rem;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			margin-right: 0.25rem;
+		}
+	}
+}

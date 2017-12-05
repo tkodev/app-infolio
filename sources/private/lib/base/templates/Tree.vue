@@ -8,13 +8,12 @@
 					i.fa.fa-folder-open(aria-hidden="true", title="Browse")
 		.pm-tree-content
 			p(v-if="loading") {{loading}}
-			TreeEntry(v-if="rootTree.children", v-for="rootTree in rootTree.children", v-bind:root-tree="rootTree", level="0")
+			tree-file(v-bind:root-tree="rootTree", v-bind:level="0")
 </template>
 
 <script>
 	// init
 	const {ipcRenderer} = require('electron');
-	import TreeEntry from './TreeEntry.vue'
 	// settings
 	export default {
 		data: function() {
@@ -27,9 +26,6 @@
 				},
 				loading: false
 			}
-		},
-		components: {
-			TreeEntry
 		},
 		methods: {
 			openFolioRoot: function(){

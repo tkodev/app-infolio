@@ -80,7 +80,11 @@ let config = {
 	],
 
 	resolve: {
-		modules: [paths.modules]
+		modules: [paths.modules],
+		alias: {
+			Base: path.resolve(__dirname, 'private/lib/base/'),
+			Templates: path.resolve(__dirname, 'private/lib/base/templates'),
+		}
 	}
 
 }
