@@ -1,7 +1,11 @@
 .pm-tree-file {
 	.pm-tree-entry {
-		margin: 0.5rem 0;
+		padding: 0.5rem;
 		font-weight: $font-weight-light;
+		&:focus,
+		&:hover {
+			background-color: $hover-highlight-default;
+		}
 		.pm-tree-icon {
 			width: 1rem;
 			display: inline-flex;

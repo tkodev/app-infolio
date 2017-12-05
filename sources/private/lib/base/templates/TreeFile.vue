@@ -1,6 +1,6 @@
 <template lang="pug">
 	.pm-tree-file(v-if="notBlacklist")
-		.pm-tree-entry(v-if="rootTree.name", v-bind:style="{'padding-left': levelMargin}", @click="toggleFolder")
+		.pm-tree-entry(v-if="rootTree.name", v-bind:style="{'padding-left': levelPadding}", @click="toggleFolder")
 			i.pm-tree-icon.fal(v-if="isFolder", v-bind:class="{'fa-folder': !open, 'fa-folder-open': open}", aria-hidden="true")
 			i.pm-tree-icon.fal.fa-file(v-if="!isFolder", aria-hidden="true")
 			| {{rootTree.name}}
@@ -29,8 +29,8 @@
 				}
 				return false;
 			},
-			levelMargin: function(){
-				return this.level + 'rem'
+			levelPadding: function(){
+				return this.level + 0.5 + 'rem'
 			},
 			isFolder: function(){
 				return !!this.rootTree.children;
