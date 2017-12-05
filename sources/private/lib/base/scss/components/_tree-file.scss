@@ -1,5 +1,7 @@
 .pm-tree-file {
+	min-width: 100%;
 	.pm-tree-entry {
+		white-space: nowrap;
 		padding: 0.5rem;
 		font-weight: $font-weight-light;
 		&:focus,
