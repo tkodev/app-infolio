@@ -48,6 +48,7 @@
 <script>
 	// init
 	import Tree from './Tree.vue'
+	import TreeEntry from './TreeEntry.vue'
 	import Controls from './Controls.vue'
 	// With shell.openExternal(url) is how external urls must be handled, not href
 	const {shell} = require('electron')

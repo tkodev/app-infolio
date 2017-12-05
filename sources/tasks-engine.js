@@ -12,12 +12,12 @@ module.exports = function(electron, functionsPath){
 	}
 	return {
 		init: function(windowObj, options){
-			ipcMain.on(options.channel, function(event, arg){
+			ipcMain.on(options.channel, function(event, argTrans){
 				var task = fork(functionsPath);
 				tasks[task.pid] = task;
-				task.send({channel: options.channel, data: options.data(arg)});
-				task.on('message', function(arg){
-					windowObj.webContents.send(options.channel, arg)
+				task.send({channel: options.channel, data: options.data(argTrans)});
+				task.on('message', function(argRecv){
+					windowObj.webContents.send(options.channel, argRecv)
 					delete tasks[task.pid];
 					killTask(task);
 				});

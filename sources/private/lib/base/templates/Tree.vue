@@ -7,15 +7,14 @@
 				button.btn.btn-outline-light(type='button', v-on:click="openFolioRoot")
 					i.fa.fa-folder-open(aria-hidden="true", title="Browse")
 		.pm-tree-content
-			template(v-if="loading")
-				| {{loading + ""}}
-			template(v-if="rootTree.name")
-				| {{rootTree.name}} {{rootTree.path}}
+			p(v-if="loading") {{loading}}
+			TreeEntry(v-if="rootTree.children", v-for="rootTree in rootTree.children", v-bind:root-tree="rootTree", level="0")
 </template>
 
 <script>
 	// init
 	const {ipcRenderer} = require('electron');
+	import TreeEntry from './TreeEntry.vue'
 	// settings
 	export default {
 		data: function() {
@@ -28,6 +27,9 @@
 				},
 				loading: false
 			}
+		},
+		components: {
+			TreeEntry
 		},
 		methods: {
 			openFolioRoot: function(){
