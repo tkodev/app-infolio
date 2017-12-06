@@ -32,7 +32,9 @@ $font-family-base      : $font-family-sans-serif;
 $font-weight-light     : 300;
 $font-weight-normal    : 400;
 $font-weight-bold      : 700;
-$font-size-base        : 0.875rem;
+$font-size-sm          : 0.625rem;
+$font-size-base        : 0.75rem;
+$font-size-lg          : 0.875rem;
 $line-height-base      : 1.125;
 
 // Core
@@ -46,5 +48,5 @@ $hover-highlight-default    : rgba($gray-600, 0.25);
 $pane-alpha-width      : 16rem;
 $pane-beta-width       : 4rem;
 $pane-omega-width      : 4rem;
-$titlebar-height       : 4rem;
+$titlebar-height       : 3rem;
 $btn-icon-height       : 1rem;

@@ -2,13 +2,13 @@
 	.pm-tree
 		.pm-tree-topbar
 			.btn-group.pm-stretch-x
-				button.btn.btn-outline-light.pm-btn-block(type='button', v-on:click="openFolioRoot")
-					| {{rootTree.name || rootDefault}}
-				button.btn.btn-outline-light(type='button', v-on:click="openFolioRoot")
+				button.btn.btn-outline-light.pm-btn-block(type='button', v-on:click="getTreeNode")
+					| {{treeNode.name || placeholder}}
+				button.btn.btn-outline-light(type='button', v-on:click="getTreeNode")
 					i.fa.fa-folder-open(aria-hidden="true", title="Browse")
 		.pm-tree-content
-			p(v-if="loading") {{loading}}
-			tree-file(v-bind:root-tree="rootTree", v-bind:level="0")
+			p(v-if="loading") Loading
+			tree-node(v-bind:tree-node="treeNode", v-bind:level="0")
 </template>
 
 <script>
@@ -18,25 +18,23 @@
 	export default {
 		data: function() {
 			return {
-				rootDefault: 'Open Portfolio Root',
-				rootTree: {
-					name: '',
-					path: '',
-					tree: {}
+				placeholder: 'Open Portfolio Root',
+				treeNode: {
+					name: ''
 				},
 				loading: false
 			}
 		},
 		methods: {
-			openFolioRoot: function(){
+			getTreeNode: function(){
 				this.loading = true
-				ipcRenderer.send('getRootTree')
+				ipcRenderer.send('getTreeNode')
 		  }
 		},
 		mounted: function() {
-		  ipcRenderer.on('getRootTree', (event, arg) => {
+		  ipcRenderer.on('getTreeNode', (event, arg) => {
 				if(arg){
-					this.rootTree = arg;
+					this.treeNode = arg;
 					this.loading = false
 				} else {
 					this.loading = false
@@ -47,8 +45,8 @@
 			loading: function(val){
 				console.log("loading", val);
 			},
-			rootTree: function(val){
-				console.log("rootTree", val);
+			treeNode: function(val){
+				console.log("treeNode", val);
 			}
 		}
 	}

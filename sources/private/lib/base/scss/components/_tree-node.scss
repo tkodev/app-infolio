@@ -1,4 +1,4 @@
-.pm-tree-file {
+.pm-tree-node {
 	min-width: 100%;
 	.pm-tree-entry {
 		white-space: nowrap;
@@ -7,13 +7,6 @@
 		&:focus,
 		&:hover {
 			background-color: $hover-highlight-default;
-		}
-		.pm-tree-icon {
-			width: 1rem;
-			display: inline-flex;
-			align-items: center;
-			justify-content: center;
-			margin-right: 0.25rem;
 		}
 	}
 }

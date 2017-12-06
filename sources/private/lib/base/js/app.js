@@ -2,9 +2,9 @@ import '../scss/app.scss'
 
 import Vue from 'vue';
 import App from 'Templates/App.vue';
-import TreeFile from 'Templates/TreeFile.vue';
+import TreeNode from 'Templates/TreeNode.vue';
 
-Vue.component('tree-file',TreeFile)
+Vue.component('tree-node',TreeNode)
 
 new Vue({
   el: '#app',

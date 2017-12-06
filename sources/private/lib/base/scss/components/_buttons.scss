@@ -1,5 +1,6 @@
 // button reset styles
 button {
+	cursor: pointer;
 	border: 0;
 	background: none;
 	color: inherit;
@@ -13,10 +14,8 @@ button {
 	padding: 0.25rem;
 	display: inline-block;
 	font-family: 'Font Awesome 5 Solid';
-	font-style: normal;
-	font-variant: normal;
-	font-weight: normal;
-	line-height: 1;
+	font-size: $font-size-lg;
+	font-weight: $font-weight-normal;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	& {
@@ -95,4 +94,14 @@ button {
 	  display: block;
 	  padding-bottom: 100%;
 	}
+}
+
+
+i.pm-btn-chevron {
+	.directory:before {
+
+	}
+}
+i.pm-btn-filetype {
+
 }

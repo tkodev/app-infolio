@@ -45,7 +45,7 @@ app.on('ready', () => {
 	});
 	// tasks - create a task on ipc channel "test", returning data for use in task
 	tasksEngine.init(mainWindow, {
-		channel: "getRootTree",
+		channel: "getTreeNode",
 		data: function(arg){
 			return dialog.showOpenDialog(mainWindow, {properties: ['openDirectory']})
 		},
