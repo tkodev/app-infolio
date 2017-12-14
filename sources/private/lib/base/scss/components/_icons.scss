@@ -1,0 +1,65 @@
+i.pm {
+	display: inline-block;
+	&, &:before {
+		width: 1rem;
+		height: 1rem;
+	}
+	&:before {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-style: normal;
+		font-family: 'Font Awesome 5 Pro';
+		font-size: $font-size-lg;
+		line-height: $line-height-base;
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+	}
+}
+
+i.pm {
+	&.pm-icon-minimize, &.pm-icon-maximize, &.pm-icon-close {
+		font-weight: $font-weight-bold;
+		&::before {
+			content: "\F111";
+		}
+	}
+	&.pm-icon-minimize::before {
+		color: $yellow;
+	}
+	&.pm-icon-maximize::before {
+		color: $green;
+	}
+	&.pm-icon-close::before {
+		color: $red;
+	}
+	&:hover {
+		&.pm-icon-minimize::before {
+			content: "\F056";
+		}
+		&.pm-icon-maximize::before {
+			content: "\F055";
+		}
+		&.pm-icon-close::before {
+			content: "\F057";
+		}
+	}
+}
+
+i.pm {
+	&.pm-icon-chevron::before {
+		font-size: $font-size-sm;
+		visibility: hidden;
+		content: "\f054"
+	}
+}
+
+i.pm {
+	&.pm-icon-directory::before {
+		font-weight: $font-weight-bold;
+		content: "\f07b"
+	}
+	&.pm-icon-file::before {
+		content: "\f15c"
+	}
+}

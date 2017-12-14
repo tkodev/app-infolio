@@ -13,50 +13,14 @@ button {
 .pm-btn-controls {
 	padding: 0.25rem;
 	display: inline-block;
-	font-family: 'Font Awesome 5 Solid';
-	font-size: $font-size-lg;
-	font-weight: $font-weight-normal;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-	& {
-		&::before {
-			content: "\F111";
-			height: 1rem;
-			width: 1rem;
-			display: block;
-			transition: $transition-default;
-		}
-		&.pm-minimize-win::before {
-			color: $yellow;
-		}
-		&.pm-maximize-win::before {
-			color: $green;
-			padding-top: 1px;
-		}
-		&.pm-close-win::before {
-			color: $red;
-		}
-	}
-	&:hover {
-		text-decoration: none;
-		&.pm-minimize-win::before {
-			content: "\F056";
-		}
-		&.pm-maximize-win::before {
-			content: "\F055";
-		}
-		&.pm-close-win::before {
-			content: "\F057";
-		}
-	}
 	&:focus {
-		&.pm-minimize-win::before {
+		i.pm.pm-minimize::before {
 			text-shadow: 0 0 1rem rgba($yellow, 0.8)
 		}
-		&.pm-maximize-win::before {
+		i.pm.pm-maximize::before {
 			text-shadow: 0 0 1rem rgba($green, 0.8)
 		}
-		&.pm-close-win::before {
+		i.pm.pm-close::before {
 			text-shadow: 0 0 1rem rgba($red, 0.8)
 		}
 	}
@@ -73,8 +37,8 @@ button {
 	}
 }
 
-// beta pane icon buttons
-.pm-btn-icon {
+// beta pane tab buttons
+.pm-btn-tab {
 	position: relative;
 	width: 100%;
 	padding: 0.5rem;
@@ -96,12 +60,29 @@ button {
 	}
 }
 
-
-i.pm-btn-chevron {
-	.directory:before {
-
+.pm-btn-node {
+	min-width: 100%;
+	padding: 0.25rem;
+	display: flex;
+	align-items: center;
+	white-space: nowrap;
+	font-weight: $font-weight-light;
+	&:focus,
+	&:hover {
+		background-color: $hover-highlight-default;
 	}
-}
-i.pm-btn-filetype {
-
+	i.pm {
+		margin-right: 0.25rem;
+	}
+	&.pm-is-open {
+		i.pm.pm-icon-chevron::before {
+			transform: rotate(90deg);
+		}
+	}
+	&.pm-icon-directory {
+		i.pm.pm-icon-chevron::before {
+			visibility: visible;
+			transition: $transition-default;
+		}
+	}
 }

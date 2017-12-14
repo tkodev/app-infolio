@@ -22,11 +22,11 @@
 				.pm-pane-topbar.justify-content-center
 					i.fa.fa-angle-double-right(aria-hidden="true")
 				.pm-pane-content.p-0
-					button.pm-btn-icon
+					button.pm-btn-tab
 						i.fal.fa-2x.fa-newspaper(aria-hidden="true")
-					button.pm-btn-icon
+					button.pm-btn-tab
 						i.fal.fa-2x.fa-tags(aria-hidden="true")
-					button.pm-btn-icon
+					button.pm-btn-tab
 						i.fal.fa-2x.fa-images(aria-hidden="true")
 				.pm-pane-botbar.justify-content-center
 					button

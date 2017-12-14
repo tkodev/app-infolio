@@ -1,10 +1,10 @@
 <template lang="pug">
 	.pm-tree-node
 		template(v-if="isValid && !isBlacklist")
-			.pm-tree-entry(v-bind:style="{'padding-left': levelPadding}", @click="toggleOpen")
-				i.pm-btn-chevron(v-bind:class="[treeNode.type, {'is-open': isOpen}]")
-				i.pm-btn-icon(v-bind:class="[treeNode.type]")
-				| {{treeNode.name}} {{treeNode.type}}
+			.pm-btn-node(v-bind:class="[fileIcon, {'pm-is-open': isOpen}]", v-bind:style="{'padding-left': levelPadding}", @click="toggleOpen")
+				i.pm.pm-icon-chevron
+				i.pm.pm-icon-filetype(v-bind:class="[fileIcon]")
+				| {{treeNode.name}}
 			tree-node(v-if="isOpen", v-for="treeNode in treeNode.children", v-bind:tree-node="treeNode", v-bind:level="level+1")
 </template>
 
@@ -20,6 +20,14 @@
 			}
 		},
 		computed: {
+			fileIcon: function(){
+				var type = this.treeNode.type;
+				if(type == "directory"){
+					return "pm-icon-directory"
+				} else {
+					return "pm-icon-file"
+				}
+			},
 			levelClass: function(){
 				return 'level_' + this.level;
 			},
