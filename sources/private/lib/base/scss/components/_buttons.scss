@@ -73,16 +73,20 @@ button {
 	}
 	i.pm {
 		margin-right: 0.25rem;
+		@extend .transition_all;
 	}
 	&.pm-is-open {
-		i.pm.pm-icon-chevron::before {
+		i.pm.pm-icon-chevron {
 			transform: rotate(90deg);
 		}
 	}
-	&.pm-icon-directory {
+	.pm-icon-directory {
 		i.pm.pm-icon-chevron::before {
 			visibility: visible;
 			transition: $transition-default;
 		}
+	}
+	.pm-icon-folio {
+		font-weight: $font-weight-bold;
 	}
 }

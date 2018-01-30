@@ -83,7 +83,7 @@ let config = {
 		modules: [paths.modules],
 		alias: {
 			Base: path.resolve(__dirname, 'private/lib/base/'),
-			Templates: path.resolve(__dirname, 'private/lib/base/templates'),
+			Components: path.resolve(__dirname, 'private/lib/base/components'),
 		}
 	}
 

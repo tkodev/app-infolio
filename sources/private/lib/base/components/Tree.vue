@@ -1,7 +1,7 @@
 <template lang="pug">
 	.pm-tree
 		.pm-tree-topbar
-			.btn-group.pm-stretch-x
+			.btn-group.w-100
 				button.btn.btn-outline-light.pm-btn-block(type='button', v-on:click="getTreeNode")
 					| {{treeNode.name || placeholder}}
 				button.btn.btn-outline-light(type='button', v-on:click="getTreeNode")

@@ -49,17 +49,14 @@ i.pm {
 i.pm {
 	&.pm-icon-chevron::before {
 		font-size: $font-size-sm;
-		visibility: hidden;
 		content: "\f054"
 	}
 }
 
 i.pm {
-	&.pm-icon-directory::before {
-		font-weight: $font-weight-bold;
-		content: "\f07b"
-	}
-	&.pm-icon-file::before {
-		content: "\f15c"
+	@each $icon, $string in $fileIcons {
+		&.pm-icon-#{$icon}::before {
+			content: $string
+		}
 	}
 }

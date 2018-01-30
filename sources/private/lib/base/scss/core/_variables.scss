@@ -50,3 +50,50 @@ $pane-beta-width       : 4rem;
 $pane-omega-width      : 4rem;
 $titlebar-height       : 3rem;
 $btn-icon-height       : 1rem;
+
+// Spacing - margins, padding
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 3),
+	6: ($spacer * 4.5),
+	7: ($spacer * 6),
+	8: ($spacer * 7.5),
+	9: ($spacer * 9)
+);
+
+// Spacing - Borders
+$borders: ("1": 1px, "2": 2px, "3": 3px, "4": 4px);
+
+// Spacing - W-* / h-*
+$sizes: (
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%
+);
+
+// ratios
+$ratios: (
+	(1,1),
+	(3,2),
+	(4,3),
+	(5,4),
+	(1920,600),
+	(1920,800),
+	(1920,1080)
+);
+
+// file icons
+$fileIcons: (
+	hidden: "\f070",
+	folio: "\f187",
+	directory: "\f07b",
+	document: "\f15c",
+	image: "\f1c5",
+	file: "\f15b"
+);

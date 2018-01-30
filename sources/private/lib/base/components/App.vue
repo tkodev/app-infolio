@@ -5,7 +5,7 @@
 			.pm-pane.pm-alpha
 				.pm-pane-topbar
 					.pm-headline
-						.pm-title.bold
+						.pm-title.font-weight-bold
 							i.fa.fa-magic.mr-1(aria-hidden="true", title="App Logo")
 							| {{logoTitle}}
 						.pm-desc
@@ -13,7 +13,7 @@
 				.pm-pane-content
 					tree
 				.pm-pane-botbar
-					.input-group.pm-stretch-x
+					.input-group.w-100
 						input.form-control(type='text', placeholder="Search for project", aria-label="Search for project")
 						span.input-group-btn
 							button.btn.btn-outline-light(type='button')
@@ -47,12 +47,13 @@
 
 <script>
 	// init
-	import Tree from 'Templates/Tree.vue'
-	import Controls from 'Templates/Controls.vue'
+	import Tree from 'Components/Tree.vue'
+	import Controls from 'Components/Controls.vue'
 	// With shell.openExternal(url) is how external urls must be handled, not href
 	const {shell} = require('electron')
 	// settings
 	export default {
+		el: '#app',
 		data: function() {
 			return {
 				logoTitle: 'InFolio',

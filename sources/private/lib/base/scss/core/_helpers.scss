@@ -1,29 +1,45 @@
-// typography
-.bold {
-	font-weight: $font-weight-bold;
-}
-.normal {
-	font-weight: $font-weight-normal;
-}
-.light {
-	font-weight: $font-weight-light;
-}
-
-// shapes
-.pm-square:after {
-  content: "";
-  display: block;
-  padding-bottom: 100%;
+// ratio
+@each $ratio in $ratios {
+	$width: nth($ratio, 1);
+	$height: nth($ratio, 2);
+	.pm-ratio-#{$width}x#{$height}:after{
+		overflow: hidden !important;
+		padding-top: $height / $width * 100% !important; // h x w aspect
+	}
+	.pm-ratio-#{$height}x#{$width}:after{
+		overflow: hidden !important;
+		padding-top: $width / $height * 100% !important; // h x w aspect
+	}
 }
 
-// stretch
-.pm-stretch {
-	height: 100%;
-	width: 100%;
-}
-.pm-stretch-x {
-	width: 100%;
-}
-.pm-stretch-y {
-	height: 100%;
+
+// Borders
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+		@each $prop, $abbrev in (border: b) {
+			@each $size, $length in $borders {
+				.#{$abbrev}#{$infix}-#{$size} {
+					#{$prop}: $length solid $border-color !important;
+				}
+				.#{$abbrev}t#{$infix}-#{$size},
+				.#{$abbrev}y#{$infix}-#{$size} {
+					#{$prop}-top: $length solid $border-color !important;
+				}
+				.#{$abbrev}r#{$infix}-#{$size},
+				.#{$abbrev}x#{$infix}-#{$size} {
+					#{$prop}-right: $length solid $border-color !important;
+				}
+				.#{$abbrev}b#{$infix}-#{$size},
+				.#{$abbrev}y#{$infix}-#{$size} {
+					#{$prop}-bottom: $length solid $border-color !important;
+				}
+				.#{$abbrev}l#{$infix}-#{$size},
+				.#{$abbrev}x#{$infix}-#{$size} {
+					#{$prop}-left: $length solid $border-color !important;
+				}
+			}
+		}
+  }
 }
