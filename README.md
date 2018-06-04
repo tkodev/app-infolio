@@ -2,6 +2,8 @@
 
 Portfolio management app built with Electron & Vue. Manages projects with the following directory tree:
 
+![App Screenshot](https://raw.githubusercontent.com/htkoca/infolio/master/assets/1280x800.png)
+
 ## Typical Project Directory Tree
 
 ```

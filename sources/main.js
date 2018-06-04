@@ -34,8 +34,8 @@ app.on('ready', () => {
 	mainWindow = new BrowserWindow({
 	  minWidth: 1024,
 		minHeight: 768,
-		width: 1024,
-		height: 768,
+		width: 1280,
+		height: 800,
 		frame: false
 	});
 	mainWindow.loadURL(`file://${__dirname}/public/index.html`)
